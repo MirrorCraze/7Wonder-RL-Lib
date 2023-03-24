@@ -1,0 +1,727 @@
+{
+  "wonders":{
+    "Rhodes":{
+      "initial" : {
+        "type" : "ore",
+        "amount" : 1
+      },
+      "A" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "wood",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "clay",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        },
+        "stage_3" :{
+          "payResource" :{
+            "type" : "ore",
+            "amount" : 4
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      },
+      "B" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "stone",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "VP",
+                "amount" : 3
+              },
+              {
+                "type" : "shield",
+                "amount" : 1
+              },
+              {
+                "type" : "coin",
+                "amount" : 3
+              }
+            ]
+
+          }
+          }
+        ,
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "ore",
+            "amount" : 4
+          },
+          "getResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "VP",
+                "amount" : 4
+              },
+              {
+                "type" : "shield",
+                "amount" : 1
+              },
+              {
+                "type" : "coin",
+                "amount" : 4
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Alexandria":{
+      "initial" : {
+        "type" : "glass",
+        "amount" : 1
+      },
+      "A" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "stone",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "ore",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        "stage_3" :{
+          "payResource" :{
+            "type" : "glass",
+            "amount" : 4
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      },
+      "B" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "clay",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "wood",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              }
+            ]
+          }
+        }
+        ,
+        "stage_3" :{
+          "payResource" :
+          {
+            "type" : "stone",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      }
+    },
+    "Ephesus":{
+      "initial" : {
+        "type" : "papyrus",
+        "amount" : 1
+      },
+      "A" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "stone",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "wood",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "coin",
+            "amount" : 9
+          }
+        },
+        "stage_3" :{
+          "payResource" :{
+            "type" : "papyrus",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      },
+      "B" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "stone",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "VP",
+                "amount" : 2
+              },
+              {
+                "type" : "coin",
+                "amount" : 4
+              }
+            ]
+          }
+        },
+        "stage_2" :{
+          "payResource" :{
+            "type" : "wood",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "VP",
+                "amount" : 3
+              },
+              {
+                "type" : "coin",
+                "amount" : 4
+              }
+            ]
+          }
+        }
+        ,
+        "stage_3" :{
+          "payResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "VP",
+                "amount" : 5
+              },
+              {
+                "type" : "coin",
+                "amount" : 4
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Babylon":{
+      "initial" : {
+        "type" : "clay",
+        "amount" : 1
+      },
+      "A" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "clay",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "wood",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "compass",
+                "amount" : 1
+              },
+              {
+                "type" : "wheel",
+                "amount" : 1
+              },
+              {
+                "type" : "tablet",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        "stage_3" :{
+          "payResource" :{
+            "type" : "clay",
+            "amount" : 4
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      },
+      "B" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "clay",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 2
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "playSeventhCard"
+          }
+        }
+        ,
+        "stage_3" :{
+          "payResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 3
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "compass",
+                "amount" : 1
+              },
+              {
+                "type" : "wheel",
+                "amount" : 1
+              },
+              {
+                "type" : "tablet",
+                "amount" : 1
+              }
+            ]
+          }
+        }
+      }
+    },
+    "Olympia":{
+      "initial" : {
+        "type" : "wood",
+        "amount" : 1
+      },
+      "A" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "wood",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "stone",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "freeStructure"
+          }
+        },
+        "stage_3" :{
+          "payResource" :{
+            "type" : "ore",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      },
+      "B" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "wood",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "sideTradingRaws"
+          }
+        },
+        "stage_2" :{
+          "payResource" :{
+            "type" : "stone",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 5
+          }
+        }
+        ,
+        "stage_3" :{
+          "payResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "loom",
+                "amount" : 1
+              },
+              {
+                "type" : "ore",
+                "amount" : 2
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "copyPurpleNeighbor"
+          }
+        }
+      }
+    },
+    "Halicarnassus":{
+      "initial" : {
+        "type" : "loom",
+        "amount" : 1
+      },
+      "A" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "clay",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "ore",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "buildDiscarded"
+          }
+        },
+        "stage_3" :{
+          "payResource" :{
+            "type" : "loom",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      },
+      "B" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "ore",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "VP",
+                "amount" : 2
+              },
+              {
+                "type" : "effect",
+                "effect" : "buildDiscarded"
+              }
+            ]
+          }
+        },
+        "stage_2" :{
+          "payResource" :{
+            "type" : "clay",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "VP",
+                "amount" : 1
+              },
+              {
+                "type" : "effect",
+                "effect" : "buildDiscarded"
+              }
+            ]
+          }
+        }
+        ,
+        "stage_3" :{
+          "payResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "buildDiscarded"
+          }
+        }
+      }
+    },
+    "Giza":{
+      "initial" : {
+        "type" : "stone",
+        "amount" : 1
+      },
+      "A" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "stone",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "wood",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 5
+          }
+        },
+        "stage_3" :{
+          "payResource" :{
+            "type" : "stone",
+            "amount" : 4
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      },
+      "B" :{
+        "stage_1" :{
+          "payResource" :{
+            "type" : "wood",
+            "amount" : 2
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        "stage_2" :{
+          "payResource" :
+          {
+            "type" : "stone",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 5
+          }
+        },
+        "stage_3" :{
+          "payResource" :{
+            "type" : "clay",
+            "amount" : 4
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 5
+          }
+        },
+        "stage_4" :{
+          "payResource" :{
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "stone",
+                "amount" : 4
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        }
+      }
+    }
+  }
+}
