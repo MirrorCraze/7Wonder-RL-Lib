@@ -1,0 +1,3505 @@
+{
+  "age_1":{
+    "3players":{
+      "brown" : [
+        {
+          "name" : "lumber yard",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "wood",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "stone pit",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "stone",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "clay pool",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "clay",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "ore vein",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "ore",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "clay pit",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "clay",
+                "amount" : 1
+              },
+              {
+                "type" : "ore",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        {
+          "name" : "timber yard",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              }
+            ]
+          }
+        }
+      ],
+      "grey" : [
+        {
+          "name" : "loom",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "loom",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "glassworks",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "glass",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "press",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "loom",
+            "amount" : 1
+          }
+        }
+      ],
+      "blue" : [
+        {
+          "name" : "baths",
+          "payResource" :
+          {
+            "type" : "stone",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        {
+          "name" : "altar",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "theater",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 2
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "east trading post",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "eastTradingRaws"
+          }
+        },
+        {
+          "name" : "west trading post",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "westTradingRaws"
+          }
+        },
+        {
+          "name" : "marketplace",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"sideManuPosts"
+          }
+        }
+      ],
+      "red" : [
+        {
+          "name" : "stockade",
+          "payResource" :
+          {
+            "type" : "wood",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "barracks",
+          "payResource" :
+          {
+            "type" : "ore",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "guard tower",
+          "payResource" :
+          {
+            "type" : "clay",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 1
+          }
+        }
+      ],
+      "green" : [
+        {
+          "name" : "apothecary",
+          "payResource" :
+          {
+            "type" : "loom",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "compass",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "workshop",
+          "payResource" :
+          {
+            "type" : "glass",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "wheel",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "scriptorium",
+          "payResource" :
+          {
+            "type" : "papyrus",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "tablet",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+
+    "4players":{
+      "brown" : [
+        {
+          "name" : "lumber yard",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "wood",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "ore vein",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "ore",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "excavation",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              }
+            ]
+          }
+        }
+      ],
+      "grey" : [],
+      "blue" : [
+        {
+          "name" : "pawnshop",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "tavern",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "coin",
+            "amount" : 5
+          }
+        }
+      ],
+      "red" : [
+        {
+          "name" : "guard tower",
+          "payResource" :
+          {
+            "type" : "clay",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 1
+          }
+        }
+      ],
+      "green" : [
+        {
+          "name" : "scriptorium",
+          "payResource" :
+          {
+            "type" : "papyrus",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "tablet",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+
+    "5players":{
+      "brown" : [
+        {
+          "name" : "stone pit",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "stone",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "clay pool",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "clay",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "forest cave",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "ore",
+                "amount" : 1
+              }
+            ]
+          }
+        }
+      ],
+      "grey" : [],
+      "blue" : [
+        {
+          "name" : "altar",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 2
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "tavern",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "coin",
+            "amount" : 5
+          }
+        }
+      ],
+      "red" : [
+        {
+          "name" : "barracks",
+          "payResource" :
+          {
+            "type" : "ore",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 1
+          }
+        }
+      ],
+      "green" : [
+        {
+          "name" : "apothecary",
+          "payResource" :
+          {
+            "type" : "loom",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "compass",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+    "6players":{
+      "brown" : [
+        {
+          "name" : "tree farm",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        {
+          "name" : "mine",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "ore",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              }
+            ]
+          }
+        }
+      ],
+      "grey" : [
+        {
+          "name" : "loom",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "loom",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "glassworks",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "glass",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "press",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "loom",
+            "amount" : 1
+          }
+        }
+      ],
+      "blue" : [
+        {
+          "name" : "theater",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 2
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "marketplace",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"sideManuPosts"
+          }
+        }
+      ],
+      "red" : [],
+      "green" : []
+    },
+
+
+    "7players":{
+      "brown" : [],
+      "grey" : [],
+      "blue" : [
+        {
+          "name" : "pawnshop",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        {
+          "name" : "baths",
+          "payResource" :
+          {
+            "type" : "stone",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "tavern",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "coin",
+            "amount" : 5
+          }
+        },
+        {
+          "name" : "east trading post",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "eastTradingRaws"
+          }
+        },
+        {
+          "name" : "west trading post",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "westTradingRaws"
+          }
+        }
+      ],
+      "red" : [
+        {
+          "name" : "stockade",
+          "payResource" :
+          {
+            "type" : "wood",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 1
+          }
+        }
+      ],
+      "green" : [
+        {
+          "name" : "workshop",
+          "payResource" :
+          {
+            "type" : "glass",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "wheel",
+            "amount" : 1
+          }
+        }
+      ]
+    }
+  },
+
+  "age_2":{
+    "3players":{
+      "brown" : [
+        {
+          "name" : "sawmill",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "wood",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "quarry",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "stone",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "clayyard",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "clay",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "foundry",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "ore",
+            "amount" : 2
+          }
+        }
+      ],
+      "grey" : [
+        {
+          "name" : "loom",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "loom",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "glassworks",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "glass",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "press",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "papyrus",
+            "amount" : 1
+          }
+        }
+      ],
+      "blue" : [
+        {
+          "name" : "aqueduct",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "baths"
+              },
+              {
+                "type" : "stone",
+                "amount" : 3
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 5
+          }
+        },
+        {
+          "name" : "temple",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "altar"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "wood",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "clay",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "glass",
+                    "amount" : 1
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        },
+        {
+          "name" : "statue",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "theater"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "wood",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "ore",
+                    "amount" : 2
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 4
+          }
+        },
+        {
+          "name" : "courthouse",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "scriptorium"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "clay",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 4
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "forum",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : ["east trading post", "west trading post"]
+              },
+              {
+                "type" : "clay",
+                "amount" : 2
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        {
+          "name" : "caravansery",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : "marketplace"
+              },
+              {
+                "type" : "wood",
+                "amount" : 2
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        {
+          "name" : "vineyard",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"threeBrownOneCoin"
+          }
+        }
+      ],
+      "red" : [
+        {
+          "name" : "walls",
+          "payResource" :
+          {
+            "type" : "stone",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        },
+
+        {
+          "name" : "stables",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "apothecary"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "ore",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "clay",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "wood",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "archery range",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "workshop"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "wood",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "ore",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        }
+      ],
+      "green" : [
+        {
+          "name" : "dispensary",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "apothecary"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "ore",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "glass",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "compass",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "laboratory",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "workshop"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "clay",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "papyrus",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "wheel",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "library",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "scriptorium"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "stone",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "tablet",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "school",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :
+            [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "tablet",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+    "4players":{
+      "brown" : [
+        {
+          "name" : "sawmill",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "wood",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "quarry",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "stone",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "clayyard",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "clay",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "foundry",
+          "payResource" :
+          {
+            "type" : "coin",
+            "amount" : 1
+          },
+          "getResource" :{
+            "type" : "ore",
+            "amount" : 2
+          }
+        }
+      ],
+      "grey" : [],
+      "blue" : [],
+      "yellow" : [
+        {
+          "name" : "bazar",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"threegreytwocoin"
+          }
+        }
+      ],
+      "red" : [
+        {
+          "name" : "training ground",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "ore",
+                "amount" : 2
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        }
+      ],
+      "green" : [
+        {
+          "name" : "dispensary",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "apothecary"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "ore",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "glass",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "compass",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+    "5players":{
+      "brown" : [],
+      "grey" : [
+        {
+          "name" : "loom",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "loom",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "glassworks",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "glass",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "press",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "papyrus",
+            "amount" : 1
+          }
+        }
+      ],
+      "blue" : [
+        {
+          "name" : "courthouse",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "scriptorium"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "clay",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 4
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "caravansery",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : "marketplace"
+              },
+              {
+                "type" : "wood",
+                "amount" : 2
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              }
+            ]
+          }
+        }
+      ],
+      "red" : [
+        {
+
+            "name" : "stables",
+            "payResource" :
+            {
+                "type" : "choose",
+                "resource" :
+                [
+                  {
+                    "type" : "card",
+                    "name" : "apothecary"
+                  },
+                  {
+                    "type" : "mixed",
+                    "resource" :
+                    [
+                      {
+                        "type" : "ore",
+                        "amount" : 1
+                      },
+                      {
+                        "type" : "clay",
+                        "amount" : 1
+                      },
+                      {
+                        "type" : "wood",
+                        "amount" : 1
+                      }
+                    ]
+                  }
+                ]
+            },
+            "getResource" :{
+              "type" : "shield",
+              "amount" : 2
+            }
+          }
+      ],
+      "green" : [
+        {
+          "name" : "laboratory",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "workshop"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "clay",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "papyrus",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "wheel",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+    "6players":{
+      "brown" : [],
+      "grey" : [],
+      "blue" : [
+        {
+          "name" : "temple",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "altar"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "wood",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "clay",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "glass",
+                    "amount" : 1
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 3
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "forum",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : ["east trading post", "west trading post"]
+              },
+              {
+                "type" : "clay",
+                "amount" : 2
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        {
+          "name" : "caravansery",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : "marketplace"
+              },
+              {
+                "type" : "wood",
+                "amount" : 2
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        {
+          "name" : "vineyard",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"threeBrownOneCoin"
+          }
+        }
+      ],
+      "red" : [
+        {
+          "name" : "training ground",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "ore",
+                "amount" : 2
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "archery range",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "workshop"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "wood",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "ore",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        }
+      ],
+      "green" : [
+        {
+          "name" : "library",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "scriptorium"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "stone",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "tablet",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+    "7players":{
+      "brown" : [],
+      "grey" : [],
+      "blue" : [
+        {
+          "name" : "aqueduct",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "baths"
+              },
+              {
+                "type" : "stone",
+                "amount" : 3
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 5
+          }
+        },
+        {
+          "name" : "statue",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "theater"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "wood",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "ore",
+                    "amount" : 2
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 4
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "forum",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : ["east trading post", "west trading post"]
+              },
+              {
+                "type" : "clay",
+                "amount" : 2
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+        {
+          "name" : "bazar",
+          "payResource" :
+          {
+            "type" : "none"
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"threegreytwocoin"
+          }
+        }
+      ],
+      "red" : [
+        {
+          "name" : "walls",
+          "payResource" :
+          {
+            "type" : "stone",
+            "amount" : 3
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        },
+        {
+          "name" : "training ground",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "ore",
+                "amount" : 2
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 2
+          }
+        }
+      ],
+      "green" : [
+        {
+          "name" : "school",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :
+            [
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "tablet",
+            "amount" : 1
+          }
+        }
+      ]
+    }
+  },
+  "age_3" :
+  {
+    "3players":{
+      "purple":
+      [
+        {
+          "name" : "workers guild",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "ore",
+                "amount" : 2
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"sideBrownOneVP"
+          }
+        },
+        {
+          "name" : "craftsmens guild",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "ore",
+                "amount" : 2
+              },
+              {
+                "type" : "stone",
+                "amount" : 2
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"sideGreyTwoVP"
+          }
+        },
+        {
+          "name" : "traders guild",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "loom",
+                "amount" : 1
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"sideYellowOneVP"
+          }
+        },
+        {
+          "name" : "philosophers guild",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "clay",
+                "amount" : 3
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"sideGreenOneVP"
+          }
+        },
+        {
+          "name" : "spies guild",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "clay",
+                "amount" : 3
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"sideRedOneVP"
+          }
+        },
+        {
+          "name" : "strategists guild",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "ore",
+                "amount" : 2
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"sideDefeatOneVP"
+          }
+        },
+        {
+          "name" : "shipowners guild",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "wood",
+                "amount" : 3
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"brownGreyPurpleOneVP"
+          }
+        },
+        {
+          "name" : "scientists guild",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "wood",
+                "amount" : 2
+              },
+              {
+                "type" : "ore",
+                "amount" : 2
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              }
+            ]
+
+          },
+          "getResource" :{
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "compass",
+                "amount" : 1
+              },
+              {
+                "type" : "wheel",
+                "amount" : 1
+              },
+              {
+                "type" : "tablet",
+                "amount" : 1
+              }
+            ]
+          }
+        },
+          {
+            "name" : "magistrates guild",
+            "payResource" :
+            {
+              "type" : "mixed",
+              "resource" :[
+                {
+                  "type" : "wood",
+                  "amount" : 3
+                },
+                {
+                  "type" : "stone",
+                  "amount" : 1
+                },
+                {
+                  "type" : "loom",
+                  "amount" : 1
+                }
+              ]
+
+            },
+            "getResource" :{
+              "type" : "effect",
+              "effect" :"sideBlueOneVP"
+            }
+          },
+          {
+            "name" : "builders guild",
+            "payResource" :
+            {
+              "type" : "mixed",
+              "resource" :[
+                {
+                  "type" : "stone",
+                  "amount" : 2
+                },
+                {
+                  "type" : "clay",
+                  "amount" : 2
+                },
+                {
+                  "type" : "glass",
+                  "amount" : 1
+                }
+              ]
+
+            },
+            "getResource" :{
+              "type" : "effect",
+              "effect" :"brownGreyPurpleOneVP"
+            }
+          }
+      ],
+      "blue":[
+        {
+          "name" : "pantheon",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "temple"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "ore",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "clay",
+                    "amount" : 2
+                  },
+                  {
+                    "type" : "glass",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "papyrus",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "loom",
+                    "amount" : 1
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 7
+          }
+        },
+        {
+          "name" : "gardens",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "statue"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "wood",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "clay",
+                    "amount" : 2
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 5
+          }
+        },
+        {
+          "name" : "town hall",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "ore",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 2
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 6
+          }
+        },
+        {
+          "name" : "palace",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "ore",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 1
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              },
+              {
+                "type" : "clay",
+                "amount" : 1
+              },
+              {
+                "type" : "wood",
+                "amount" : 1
+              },
+              {
+                "type" : "glass",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 8
+          }
+        },
+        {
+          "name" : "senate",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "library"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "stone",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "wood",
+                    "amount" : 2
+                  },
+                  {
+                    "type" : "ore",
+                    "amount" : 1
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 6
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "haven",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : "forum"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "loom",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "wood",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "ore",
+                    "amount" : 1
+                  }
+                ]
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "brownOneCoinOneVP"
+          }
+        },
+        {
+          "name" : "lighthouse",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : "caravansery"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "stone",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "glass",
+                    "amount" : 1
+                  }
+                ]
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "yellowOneCoinOneVP"
+          }
+        },
+        {
+          "name" : "arena",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : "dispensary"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "stone",
+                    "amount" : 2
+                  },
+                  {
+                    "type" : "ore",
+                    "amount" : 1
+                  }
+                ]
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "stageThreeCoinOneVP"
+          }
+        }
+      ],
+      "red" :[
+        {
+          "name" : "fortification",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "walls"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "stone",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "ore",
+                      "amount" : 3
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 3
+          }
+        },
+        {
+          "name" : "arsenal",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "wood",
+                "amount" : 2
+              },
+              {
+                "type" : "ore",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 3
+          }
+        },
+        {
+          "name" : "siege workshop",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "laboratory"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "clay",
+                      "amount" : 3
+                    },
+                    {
+                      "type" : "wood",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 3
+          }
+        }
+      ],
+      "green" :[
+        {
+          "name" : "lodge",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "dispensary"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "clay",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "papyrus",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "compass",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "observatory",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "laboratory"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "ore",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "glass",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "wheel",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "university",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "library"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "wood",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "glass",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "papyrus",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "tablet",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "academy",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "school"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "stone",
+                      "amount" : 3
+                    },
+                    {
+                      "type" : "glass",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "compass",
+            "amount" : 1
+          }
+        },
+        {
+          "name" : "study",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "school"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "wood",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "papyrus",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "wheel",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+    "4players":{
+      "purple":[],
+      "blue":[
+        {
+          "name" : "gardens",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "statue"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "wood",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "clay",
+                    "amount" : 2
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 5
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "haven",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : "forum"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "loom",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "wood",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "ore",
+                    "amount" : 1
+                  }
+                ]
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "brownOneCoinOneVP"
+          }
+        },
+        {
+          "name" : "chamber of commerce",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "clay",
+                "amount" : 2
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" :"greyTwoCoinTwoVP"
+          }
+        }
+      ],
+      "red" :[
+        {
+          "name" : "circus",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "training ground"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "stone",
+                      "amount" : 3
+                    },
+                    {
+                      "type" : "ore",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 3
+          }
+        },
+        {
+          "name" : "arsenal",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" :[
+              {
+                "type" : "wood",
+                "amount" : 2
+              },
+              {
+                "type" : "ore",
+                "amount" : 1
+              },
+              {
+                "type" : "loom",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 3
+          }
+        }
+      ],
+      "green" :[
+        {
+          "name" : "university",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "library"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "wood",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "glass",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "papyrus",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "tablet",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+    "5players":{
+      "purple":[],
+      "blue":[
+        {
+          "name" : "town hall",
+          "payResource" :
+          {
+            "type" : "mixed",
+            "resource" : [
+              {
+                "type" : "ore",
+                "amount" : 1
+              },
+              {
+                "type" : "stone",
+                "amount" : 2
+              },
+              {
+                "type" : "papyrus",
+                "amount" : 1
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 6
+          }
+        },
+        {
+          "name" : "senate",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" : [
+              {
+                "type" : "card",
+                "name" : "library"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "stone",
+                    "amount" : 1
+                  },
+                  {
+                    "type" : "wood",
+                    "amount" : 2
+                  },
+                  {
+                    "type" : "ore",
+                    "amount" : 1
+                  }
+                ]
+              }
+
+            ]
+          },
+          "getResource" :{
+            "type" : "VP",
+            "amount" : 6
+          }
+        }
+      ],
+      "yellow" : [
+        {
+          "name" : "arena",
+          "payResource" :
+          {
+            "type" : "choose",
+            "resource" :
+            [
+              {
+                "type" : "card",
+                "name" : "dispensary"
+              },
+              {
+                "type" : "mixed",
+                "resource" : [
+                  {
+                    "type" : "stone",
+                    "amount" : 2
+                  },
+                  {
+                    "type" : "ore",
+                    "amount" : 1
+                  }
+                ]
+              }
+            ]
+          },
+          "getResource" :{
+            "type" : "effect",
+            "effect" : "stageThreeCoinOneVP"
+          }
+        }
+      ],
+      "red" :[
+        {
+          "name" : "circus",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "training ground"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "stone",
+                      "amount" : 3
+                    },
+                    {
+                      "type" : "ore",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "shield",
+            "amount" : 3
+          }
+        },
+        {
+
+            "name" : "siege workshop",
+            "payResource" :
+            {
+                "type" : "choose",
+                "resource" :
+                [
+                  {
+                    "type" : "card",
+                    "name" : "laboratory"
+                  },
+                  {
+                    "type" : "mixed",
+                    "resource" :
+                    [
+                      {
+                        "type" : "clay",
+                        "amount" : 3
+                      },
+                      {
+                        "type" : "wood",
+                        "amount" : 1
+                      }
+                    ]
+                  }
+                ]
+            },
+            "getResource" :{
+              "type" : "shield",
+              "amount" : 3
+            }
+
+        }
+      ],
+      "green" :[
+        {
+          "name" : "study",
+          "payResource" :
+          {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "school"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" :
+                  [
+                    {
+                      "type" : "wood",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "papyrus",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+          },
+          "getResource" :{
+            "type" : "wheel",
+            "amount" : 1
+          }
+        }
+      ]
+    },
+      "6players" : {
+        "purple":[],
+        "blue":[
+          {
+            "name" : "pantheon",
+            "payResource" :
+            {
+              "type" : "choose",
+              "resource" : [
+                {
+                  "type" : "card",
+                  "name" : "temple"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" : [
+                    {
+                      "type" : "ore",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "clay",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "glass",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "papyrus",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "loom",
+                      "amount" : 1
+                    }
+                  ]
+                }
+
+              ]
+            },
+            "getResource" :{
+              "type" : "VP",
+              "amount" : 7
+            }
+          },
+          {
+            "name" : "town hall",
+            "payResource" :
+            {
+              "type" : "mixed",
+              "resource" : [
+                {
+                  "type" : "ore",
+                  "amount" : 1
+                },
+                {
+                  "type" : "stone",
+                  "amount" : 2
+                },
+                {
+                  "type" : "papyrus",
+                  "amount" : 1
+                }
+              ]
+            },
+            "getResource" :{
+              "type" : "VP",
+              "amount" : 6
+            }
+          }
+        ],
+        "yellow" : [
+          {
+            "name" : "lighthouse",
+            "payResource" :
+            {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "caravansery"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" : [
+                    {
+                      "type" : "stone",
+                      "amount" : 1
+                    },
+                    {
+                      "type" : "glass",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+            },
+            "getResource" :{
+              "type" : "effect",
+              "effect" : "yellowOneCoinOneVP"
+            }
+          },
+          {
+            "name" : "chamber of commerce",
+            "payResource" :
+            {
+              "type" : "mixed",
+              "resource" : [
+                {
+                  "type" : "clay",
+                  "amount" : 2
+                },
+                {
+                  "type" : "papyrus",
+                  "amount" : 1
+                }
+              ]
+            },
+            "getResource" :{
+              "type" : "effect",
+              "effect" :"greyTwoCoinTwoVP"
+            }
+          }
+        ],
+        "red" :[
+          {
+            "name" : "circus",
+            "payResource" :
+            {
+                "type" : "choose",
+                "resource" :
+                [
+                  {
+                    "type" : "card",
+                    "name" : "training ground"
+                  },
+                  {
+                    "type" : "mixed",
+                    "resource" :
+                    [
+                      {
+                        "type" : "stone",
+                        "amount" : 3
+                      },
+                      {
+                        "type" : "ore",
+                        "amount" : 1
+                      }
+                    ]
+                  }
+                ]
+            },
+            "getResource" :{
+              "type" : "shield",
+              "amount" : 3
+            }
+          }
+        ],
+        "green" :[
+          {
+            "name" : "lodge",
+            "payResource" :
+            {
+                "type" : "choose",
+                "resource" :
+                [
+                  {
+                    "type" : "card",
+                    "name" : "dispensary"
+                  },
+                  {
+                    "type" : "mixed",
+                    "resource" :
+                    [
+                      {
+                        "type" : "clay",
+                        "amount" : 2
+                      },
+                      {
+                        "type" : "loom",
+                        "amount" : 1
+                      },
+                      {
+                        "type" : "papyrus",
+                        "amount" : 1
+                      }
+                    ]
+                  }
+                ]
+            },
+            "getResource" :{
+              "type" : "compass",
+              "amount" : 1
+            }
+          }
+        ]
+      },
+      "7players" :{
+        "purple":[],
+        "blue":[
+          {
+            "name" : "palace",
+            "payResource" :
+            {
+              "type" : "mixed",
+              "resource" : [
+                {
+                  "type" : "ore",
+                  "amount" : 1
+                },
+                {
+                  "type" : "stone",
+                  "amount" : 1
+                },
+                {
+                  "type" : "papyrus",
+                  "amount" : 1
+                },
+                {
+                  "type" : "loom",
+                  "amount" : 1
+                },
+                {
+                  "type" : "clay",
+                  "amount" : 1
+                },
+                {
+                  "type" : "wood",
+                  "amount" : 1
+                },
+                {
+                  "type" : "glass",
+                  "amount" : 1
+                }
+              ]
+            },
+            "getResource" :{
+              "type" : "VP",
+              "amount" : 8
+            }
+          }
+        ],
+        "yellow" : [
+          {
+            "name" : "arena",
+            "payResource" :
+            {
+              "type" : "choose",
+              "resource" :
+              [
+                {
+                  "type" : "card",
+                  "name" : "dispensary"
+                },
+                {
+                  "type" : "mixed",
+                  "resource" : [
+                    {
+                      "type" : "stone",
+                      "amount" : 2
+                    },
+                    {
+                      "type" : "ore",
+                      "amount" : 1
+                    }
+                  ]
+                }
+              ]
+            },
+            "getResource" :{
+              "type" : "effect",
+              "effect" : "stageThreeCoinOneVP"
+            }
+          }
+        ],
+        "red" :[
+          {
+            "name" : "fortification",
+            "payResource" :
+            {
+                "type" : "choose",
+                "resource" :
+                [
+                  {
+                    "type" : "card",
+                    "name" : "walls"
+                  },
+                  {
+                    "type" : "mixed",
+                    "resource" :
+                    [
+                      {
+                        "type" : "stone",
+                        "amount" : 1
+                      },
+                      {
+                        "type" : "ore",
+                        "amount" : 3
+                      }
+                    ]
+                  }
+                ]
+            },
+            "getResource" :{
+              "type" : "shield",
+              "amount" : 3
+            }
+          },
+          {
+            "name" : "arsenal",
+            "payResource" :
+            {
+              "type" : "mixed",
+              "resource" :[
+                {
+                  "type" : "wood",
+                  "amount" : 2
+                },
+                {
+                  "type" : "ore",
+                  "amount" : 1
+                },
+                {
+                  "type" : "loom",
+                  "amount" : 1
+                }
+              ]
+            },
+            "getResource" :{
+              "type" : "shield",
+              "amount" : 3
+            }
+          }
+        ],
+        "green" :[
+          {
+            "name" : "observatory",
+            "payResource" :
+            {
+                "type" : "choose",
+                "resource" :
+                [
+                  {
+                    "type" : "card",
+                    "name" : "laboratory"
+                  },
+                  {
+                    "type" : "mixed",
+                    "resource" :
+                    [
+                      {
+                        "type" : "ore",
+                        "amount" : 2
+                      },
+                      {
+                        "type" : "glass",
+                        "amount" : 1
+                      },
+                      {
+                        "type" : "loom",
+                        "amount" : 1
+                      }
+                    ]
+                  }
+                ]
+            },
+            "getResource" :{
+              "type" : "wheel",
+              "amount" : 1
+            }
+          },
+          {
+            "name" : "academy",
+            "payResource" :
+            {
+                "type" : "choose",
+                "resource" :
+                [
+                  {
+                    "type" : "card",
+                    "name" : "school"
+                  },
+                  {
+                    "type" : "mixed",
+                    "resource" :
+                    [
+                      {
+                        "type" : "stone",
+                        "amount" : 3
+                      },
+                      {
+                        "type" : "glass",
+                        "amount" : 1
+                      }
+                    ]
+                  }
+                ]
+            },
+            "getResource" :{
+              "type" : "compass",
+              "amount" : 1
+            }
+          }
+        ]
+      }
+  }
+}

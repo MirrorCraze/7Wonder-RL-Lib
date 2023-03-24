@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Model files
+7WondersEnv/SevenWonEnv/envs/Model3Players/
+7WondersEnv/SevenWonEnv/envs/Model4Player/
+7WondersEnv/SevenWonEnv/envs/ModelDict/

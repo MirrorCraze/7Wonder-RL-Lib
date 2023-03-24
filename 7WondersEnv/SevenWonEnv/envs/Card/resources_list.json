@@ -1,0 +1,14 @@
+{
+  "resourceName":
+  [
+    {"raw" : ["wood", "clay", "ore", "stone"]},
+    {"manufactured" : ["papyrus","glass","loom"]},
+    {"science" : ["compass", "wheel", "tablet"]},
+    "VP",
+    "shield",
+    "coin",
+    "card",
+    "VP",
+    "defeatPoint"
+  ]
+}

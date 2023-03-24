@@ -1,0 +1,24 @@
+{
+  "effect" :[
+    "freeStructure",
+    "playSeventhCard",
+    "sideTradingRaws",
+    "copyPurpleNeighbor",
+    "buildDiscarded",
+    "eastTradingRaws",
+    "westTradingRaws",
+    "sideManuPosts",
+    "threeBrownOneCoin",
+    "sideBrownOneVP",
+    "sideGreyTwoVP",
+    "sideYellowOneVP",
+    "sideGreenOneVP",
+    "sideRedOneVP",
+    "sideDefeatOneVP",
+    "brownGreyPurpleOneVP",
+    "brownOneCoinOneVP",
+    "yellowOneCoinOneVP",
+    "stageThreeCoinOneVP",
+    "greyTwoCoinTwoVP"
+  ]
+}
