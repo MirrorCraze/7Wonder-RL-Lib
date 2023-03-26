@@ -1,0 +1,37 @@
+SETUP COMPLETE
+Player 1 with wonders Halicarnassus
+Player 2 with wonders Alexandria
+Player 3 with wonders Babylon
+Player 4 with wonders Olympia
+PLAYER 1 play timber yard
+PLAYER 2 play workshop
+PLAYER 3 play excavation
+PLAYER 4 play step 1
+PLAYER 1 resource wood 0 clay 0 ore 0 stone 0 papyrus 0 glass 0 loom 1 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 2 resource wood 0 clay 0 ore 0 stone 0 papyrus 0 glass 1 loom 0 compass 0 wheel 1 tablet 0 shield 0 
+PLAYER 3 resource wood 0 clay 1 ore 0 stone 0 papyrus 0 glass 0 loom 0 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 4 resource wood 1 clay 0 ore 0 stone 0 papyrus 0 glass 0 loom 0 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 1 play clay pit
+PLAYER 2 play stone pit
+PLAYER 3 play ore vein
+PLAYER 4 play step 2
+PLAYER 1 resource wood 0 clay 0 ore 0 stone 0 papyrus 0 glass 0 loom 1 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 2 resource wood 0 clay 0 ore 0 stone 1 papyrus 0 glass 1 loom 0 compass 0 wheel 1 tablet 0 shield 0 
+PLAYER 3 resource wood 0 clay 1 ore 1 stone 0 papyrus 0 glass 0 loom 0 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 4 resource wood 1 clay 0 ore 0 stone 0 papyrus 0 glass 0 loom 0 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 1 play apothecary
+PLAYER 2 play ore vein
+PLAYER 3 play lumber yard
+PLAYER 4 play loom
+PLAYER 1 resource wood 0 clay 0 ore 0 stone 0 papyrus 0 glass 0 loom 1 compass 1 wheel 0 tablet 0 shield 0 
+PLAYER 2 resource wood 0 clay 0 ore 1 stone 1 papyrus 0 glass 1 loom 0 compass 0 wheel 1 tablet 0 shield 0 
+PLAYER 3 resource wood 1 clay 1 ore 1 stone 0 papyrus 0 glass 0 loom 0 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 4 resource wood 1 clay 0 ore 0 stone 0 papyrus 0 glass 0 loom 1 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 1 play step 1
+PLAYER 2 play guard tower
+PLAYER 3 play glassworks
+PLAYER 4 play clay pool
+PLAYER 1 resource wood 0 clay 0 ore 0 stone 0 papyrus 0 glass 0 loom 1 compass 1 wheel 0 tablet 0 shield 0 
+PLAYER 2 resource wood 0 clay 0 ore 1 stone 1 papyrus 0 glass 1 loom 0 compass 0 wheel 1 tablet 0 shield 1 
+PLAYER 3 resource wood 1 clay 1 ore 1 stone 0 papyrus 0 glass 1 loom 0 compass 0 wheel 0 tablet 0 shield 0 
+PLAYER 4 resource wood 1 clay 1 ore 0 stone 0 papyrus 0 glass 0 loom 1 compass 0 wheel 0 tablet 0 shield 0 

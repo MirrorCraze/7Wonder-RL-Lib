@@ -1,0 +1,11 @@
+SETUP COMPLETE
+Player 1 is  <class 'SevenWonEnv.envs.mainGameEnv.Personality.DQNAI'>
+Player 2 is  <class 'SevenWonEnv.envs.mainGameEnv.Personality.RandomAI'>
+Player 3 is  <class 'SevenWonEnv.envs.mainGameEnv.Personality.RandomAI'>
+Player 4 is  <class 'SevenWonEnv.envs.mainGameEnv.Personality.RandomAI'>
+Player 5 is  <class 'SevenWonEnv.envs.mainGameEnv.Personality.RandomAI'>
+<class 'SevenWonEnv.envs.mainGameEnv.Personality.DQNAI'>
+<class 'SevenWonEnv.envs.mainGameEnv.Personality.RandomAI'>
+<class 'SevenWonEnv.envs.mainGameEnv.Personality.RandomAI'>
+<class 'SevenWonEnv.envs.mainGameEnv.Personality.RandomAI'>
+<class 'SevenWonEnv.envs.mainGameEnv.Personality.RandomAI'>

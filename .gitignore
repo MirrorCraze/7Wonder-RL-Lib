@@ -132,3 +132,9 @@ dmypy.json
 7WondersEnv/SevenWonEnv/envs/Model3Players/
 7WondersEnv/SevenWonEnv/envs/Model4Player/
 7WondersEnv/SevenWonEnv/envs/ModelDict/
+
+#Graph files
+7WondersEnv/SevenWonEnv/envs/Graph/
+
+#Game Log
+7WondersEnv/SevenWonEnv/envs/GameLog/
