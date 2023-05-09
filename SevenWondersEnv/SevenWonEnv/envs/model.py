@@ -4,12 +4,15 @@ import torch.optim as optim
 import torch.nn.functional as F
 from collections import namedtuple, deque
 
-class DQNModel():
+
+class DQNModel:
     def __init__(self):
-        self.Transition = namedtuple('Transition',
-                                ('state', 'action', 'next_state', 'reward'))
-        self.TransitionWithoutReward = namedtuple('TransitionWithoutReward',
-                                             ('state', 'action', 'next_state'))
+        self.Transition = namedtuple(
+            "Transition", ("state", "action", "next_state", "reward")
+        )
+        self.TransitionWithoutReward = namedtuple(
+            "TransitionWithoutReward", ("state", "action", "next_state")
+        )
         self.BATCH_SIZE = 128
         self.GAMMA = 0.999
         # Decaying epsilon greedy.
@@ -19,6 +22,7 @@ class DQNModel():
         self.TARGET_UPDATE = 10
         self.DISCOUNTED_RATE = 0.95
         self.steps = 0
+
     class memoryNoReward(object):
         def __init__(self, capacity):
             self.memory = deque([], maxlen=capacity)
@@ -34,7 +38,6 @@ class DQNModel():
             return len(self.memory)
 
     class ReplayMemory(object):
-
         def __init__(self, capacity):
             self.memory = deque([], maxlen=capacity)
 
