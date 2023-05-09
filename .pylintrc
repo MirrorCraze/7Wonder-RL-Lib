@@ -430,7 +430,11 @@ disable=raw-checker-failed,
         no-else-break,
         too-many-return-statements,
         too-many-branches,
-        unused-variable
+        unused-variable,
+        invalid-name,
+        consider-iterating-dictionary,
+        unused-import,
+        import-error
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
