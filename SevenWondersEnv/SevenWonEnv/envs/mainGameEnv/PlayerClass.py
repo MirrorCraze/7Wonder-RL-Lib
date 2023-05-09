@@ -34,6 +34,8 @@ class Player:
         self.personality = person
         self.freeStructure = False
         self.endTurnEffect = None
+    def assignPersonality(self, personality):
+        self.personality = personality
     def assignWonders(self,wonder):
         self.wonders = wonder
         beginRes = wonder.beginResource
@@ -48,7 +50,7 @@ class Player:
             print(card.name, end = " ")
     def assignHand(self,hand):
         self.hand = hand
-    def cardExist(self,name):
+    def cardExist(self, name):
         for singleCard in self.card:
             if singleCard.name == name:
                 return True
@@ -361,9 +363,9 @@ class Player:
         leftPrice = selectedCard[1]
         rightPrice = selectedCard[2]
         action = selectedCard[3]
-        stageCard = None
-        if isinstance(selectedCard[0], Stage):
-            stageCard = selectedCard[4]
+        stage = None
+        if len(selectedCard) == 5:
+            stage = selectedCard[4]
         selectedCard = selectedCard[0]
         if action == -1:
             #print("SELECT")
@@ -382,8 +384,8 @@ class Player:
             self.card.append(selectedCard)
             self.color[selectedCard.color] += 1
             self.lastPlayColor = selectedCard.color
-        elif isinstance(selectedCard, Stage):
-            status = self.deleteCardFromHand(stageCard)
+        elif action == 2:
+            status = self.deleteCardFromHand(selectedCard)
             self.wonders.stage += 1
             #print(self.wonders.name)
             #print(self.wonders.step[self.wonders.stage].printCard())
@@ -396,8 +398,8 @@ class Player:
                     #print(resource["type"])
                     self.addedCardSys(resource,selectedCard)
         elif selectedCard.getResource["type"] == "choose":
-            if isinstance(selectedCard, Stage):
-                self.chooseStage.append(selectedCard)
+            if isinstance(stage, Stage):
+                self.chooseStage.append(stage)
             else:
                 self.choosecard.append(selectedCard)
         else:
@@ -429,7 +431,7 @@ class Player:
             self.card.append(selectedCard)
             self.color[selectedCard.color] += 1
             self.lastPlayColor = selectedCard.color
-        elif isinstance(selectedCard, Stage):
+        elif action == 2:
             #self.deleteCardFromHand(stageCard)
             self.wonders.stage += 1
             #print(self.wonders.name)
@@ -466,7 +468,7 @@ class Player:
                 left, right = self.playable(steps[existedStage])
                 if left != -1 and right != -1:
                     for card in self.hand:
-                        choices.append([steps[existedStage], left, right, 0, card])
+                        choices.append([card, left, right, 2, steps[existedStage]])
                 #print("APPENDED STAGES")
             persona = self.personality
             selectedCard = choices[persona.make_choice(self = persona,player = self,age =age, options=choices)]
@@ -497,40 +499,13 @@ class Player:
             for card in self.hand:
                 choices.append([card,0,0,1]) #card,leftPrice,rightPrice,1 for using free effect
         steps = self.wonders.step
-        #print("LEN STEPS : {}".format(len(steps)))
         existedStage = self.wonders.stage+1
-        #print(type(steps[existedStage]))
         if existedStage < len(steps):
             left,right = self.playable(steps[existedStage])
             if left != -1 and right != -1:
                 for card in self.hand:
-                    choices.append([steps[existedStage],left,right,0,card])
-            #print("APPENDED STAGES")
-        #print("CHOICES : ")
-        #for choice in choices:
-            # if isinstance(choice[0],Card):
-            #     print(choice[0].name, end = " ")
-            # else:
-            #     print(self.wonders.name + str(choice[0].stage), end = " ")
-            # print("{} ,{} ,{} ".format(choice[1],choice[2],choice[3]),end = " ")
-            # if isinstance(choice[0],Stage):
-            #     print("{} ".format(choice[4].name))
-            # print()
-        #print(len(choices))
-        #print(choices[0].printCard())
+                    choices.append([card, left, right, 2, steps[existedStage]]) # Append Stage
         persona = self.personality
-        #print("age" + str(age))
-        #print(persona.make_choice(self = persona,player = self,age = age,options=choices))
         selectedCard = choices[persona.make_choice(self = persona,player = self,age =age, options=choices)]
+        print("SELECT", selectedCard)
         return self.playChosenCard(selectedCard)
-
-
-
-
-
-
-
-
-
-
-

@@ -4,7 +4,6 @@ from copy import deepcopy
 from SevenWonEnv.envs.mainGameEnv.stageClass import Stage
 from SevenWonEnv.envs.mainGameEnv.cardClass import Card
 
-
 class Personality:
 
     def __init__(self):
@@ -12,6 +11,7 @@ class Personality:
 
     def make_choice(self, player,age,options):
         pass
+
 
 class DQNAI(Personality):#placeholder
     def __init__(self):

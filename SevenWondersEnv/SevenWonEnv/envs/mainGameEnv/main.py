@@ -10,12 +10,12 @@ from SevenWonEnv.envs.mainGameEnv.Personality import RuleBasedAI
 from SevenWonEnv.envs.mainGameEnv.stageClass import Stage
 import sys
 def init(player):
-    fileOper = open('../Card/card_list.json', 'rt')
+    fileOper = open('Card/card_list.json', 'rt')
     cardList = json.load(fileOper)
     cardAge = []
     for i in range(1, 4):
         cardAge.append(getCardAge("age_" + str(i), player, cardList))
-    fileOper = open('../Card/wonders_list.json', 'rt')
+    fileOper = open('Card/wonders_list.json', 'rt')
     wonderList = json.load(fileOper)
     wonderList = wonderList["wonders"]
     wonderName= list(wonderList.keys())
@@ -31,7 +31,7 @@ def init(player):
         wonderCur = wonderList[wonderCurName]
         initialResource = Resource(wonderCur["initial"]["type"],wonderCur["initial"]["amount"])
         #print(type(wonderList[wonderCurName][side]))
-        newWonders = Wonder(wonderCurName, side, wonderCur["initial"]["type"],wonderCur["initial"]["amount"], **wonderList[wonderCurName][side])
+        newWonders = Wonder(wonderCurName, side, initialResource, **wonderList[wonderCurName][side])
         newPlayer.assignWonders(newWonders)
         playerList[i]=newPlayer
     for i in range(1,player+1):
@@ -88,7 +88,7 @@ if __name__ == "__main__":
             for j in range(len(playerList)):
                 player = playerList[j+1]
                 if player.endTurnEffect == "buildDiscarded":
-                    card,action = player.playFromEffect(discarded,player.endTurnEffect)
+                    card,action = player.playFromEffect(discarded,player.endTurnEffect, age = age)
                     discarded = [disCard for disCard in discarded if disCard.name!=card.name]
         print("REMAINING HANDS")
         for j in range(len(playerList)):

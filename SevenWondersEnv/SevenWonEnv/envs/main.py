@@ -5,6 +5,7 @@ import random
 import numpy as np
 from itertools import count
 import SevenWonEnv
+from SevenWonEnv.envs.mainGameEnv import Personality
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -13,6 +14,8 @@ from collections import namedtuple, deque
 
 import matplotlib
 import matplotlib.pyplot as plt
+
+from model import DQNModel
 
 Transition = namedtuple('Transition',
                         ('state', 'action', 'next_state', 'reward'))
@@ -73,7 +76,16 @@ class DQN(nn.Module):
 
 if __name__ == '__main__':
     print(torch.cuda.is_available())
-    env = gym.make("SevenWonderEnv")
+    for env in gym.registry:
+        print(env)
+    env = gym.make("SevenWonderEnv", player = 4)
+    # Add Players
+    personalityList = []
+    personalityList.append(Personality.DQNAI)
+    for i in range(1,4):
+        personalityList.append(Personality.RandomAI)
+    env.setPersonality(personalityList)
+
     # set up matplotlib
     is_ipython = 'inline' in matplotlib.get_backend()
     if is_ipython:
@@ -136,7 +148,7 @@ if __name__ == '__main__':
             means = rewards_t.unfold(0, 100, 1).mean(1).view(-1)
             means = torch.cat((torch.zeros(99), means))
             plt.plot(xRange,means.numpy())
-        #if len(episode_reward) %100 == 0:
+        if len(episode_reward) %100 == 0:
             graphPath = os.path.join('Graph', str(len(episode_reward)) + '.png')
             plt.savefig(graphPath)
         plt.pause(0.01)  # pause a bit so that plots are updated
@@ -177,6 +189,7 @@ if __name__ == '__main__':
 
 
     num_episodes = 20000
+    prevEp = 0
     for i_episode in range(prevEp, num_episodes):
         if i_episode %200 == 0:
             torch.save(poliNet.state_dict(),os.path.join("ModelDict","poliNet" + str(i_episode) + ".pt"))
@@ -188,12 +201,12 @@ if __name__ == '__main__':
         subMemory = []
         for t in count():
             # Select and perform an action
-            possibleAction = env.legalAction()
+            possibleAction = env.legalAction(1)
             #print(possibleAction)
             action = select_action(state,possibleAction)
+            #print("STEP ACtION",action)
             #print("PLAY" + str(action.item()))
-            newNPState, reward, done, info = env.step(action.item())
-
+            newNPState, reward, done, info = env.step()
             reward = torch.tensor([reward], device=device)
             newState = torch.from_numpy(newNPState.reshape(1, newNPState.size).astype(np.float32))
             # Store the transition in memory
@@ -222,5 +235,3 @@ if __name__ == '__main__':
     plt.ioff()
     #plt.show(block = False)
     #check_env(env)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

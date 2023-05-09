@@ -1,5 +1,4 @@
 from SevenWonEnv.envs.mainGameEnv.cardClass import Card
-from SevenWonEnv.envs.mainGameEnv.PlayerClass import Player
 from SevenWonEnv.envs.mainGameEnv.resourceClass import Resource
 import random
 def resBuild(cardJSON):
@@ -46,4 +45,4 @@ def battle(player1,player2,age):
         loser = player1
     if winner is not None:
         winner.warVP +=winPts
-        loser.warVP +=1
+        loser.warVP -=1
