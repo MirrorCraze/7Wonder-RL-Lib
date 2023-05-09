@@ -1,5 +1,3 @@
-from SevenWonEnv.envs.mainGameEnv.WonderClass import Wonder
-from SevenWonEnv.envs.mainGameEnv.Personality import Personality
 from SevenWonEnv.envs.mainGameEnv.resourceClass import Resource
 from SevenWonEnv.envs.mainGameEnv.cardClass import Card
 from SevenWonEnv.envs.mainGameEnv.stageClass import Stage
@@ -55,32 +53,30 @@ class Player:
             if singleCard.name == name:
                 return True
         return False
-    def resourceExist(self,type): #Use in case of neighbor Player
-        if self.resource[type] > 0:
+    def resourceExist(self,resourceType): #Use in case of neighbor Player
+        if self.resource[resourceType] > 0:
             return True
-        else:
-            for card in self.choosecard:
-                for choose in card.getResource['resource']:
-                    if choose['type'] == type:
-                        return True
-            return False
+        for card in self.choosecard:
+            for choose in card.getResource['resource']:
+                if choose['type'] == resourceType:
+                    return True
+        return False
 
-    def checkLeftRight(self,amount,type):
-        leftPrice = self.westTradePrices[type]
-        rightPrice = self.eastTradePrices[type]
+    def checkLeftRight(self,amount,resourceType):
+        leftPrice = self.westTradePrices[resourceType]
+        rightPrice = self.eastTradePrices[resourceType]
         minPrice = 10000000
         side = "M"
-        if self.coin >= leftPrice*amount and self.left.resourceExist(type):
+        if self.coin >= leftPrice*amount and self.left.resourceExist(resourceType):
             minPrice = leftPrice*amount
             side = "L"
-        if self.coin >=rightPrice*amount and self.right.resourceExist(type):
+        if self.coin >=rightPrice*amount and self.right.resourceExist(resourceType):
             if minPrice > rightPrice*amount:
                 minPrice = rightPrice*amount
                 side = "R"
         if side == "M":
             return -1,side
-        else:
-            return minPrice,side
+        return minPrice,side
 
 
     def addiResComp(self,targetArr,curResArr):
@@ -99,7 +95,6 @@ class Player:
          #   i.printResource()
         return targetArr
     def BFS(self,targetArray,resourceArray):
-        layerBefore = []
         queue = []
         minLeft = 10000000
         minRight = 10000000
@@ -121,7 +116,7 @@ class Player:
                 price,side = self.checkLeftRight(remain.amount,remain.resource)
                 if price == -1:
                     break
-                elif side == "L":
+                if side == "L":
                     left += price
                 elif side == "R":
                     right += price
@@ -339,6 +334,7 @@ class Player:
     def deleteCardFromHand(self,card):
         if any(cardExist for cardExist in self.hand if cardExist.name == card.name):
             self.hand.remove(card)
+            return 1
         else:
             return -1
 
@@ -374,6 +370,8 @@ class Player:
             # else:
             #     print(selectedCard.stage)
             status = self.deleteCardFromHand(selectedCard)
+            if not status:
+                print("ERROR STATUS")
             self.coin += 3
             return selectedCard, action
         elif action == 1:
@@ -410,9 +408,9 @@ class Player:
         leftPrice = selectedCard[1]
         rightPrice = selectedCard[2]
         action = selectedCard[3]
-        stageCard = None
-        if isinstance(selectedCard[0], Stage):
-            stageCard = selectedCard[4]
+        stage = None
+        if len(selectedCard) == 5:
+            stage = selectedCard[4]
         selectedCard = selectedCard[0]
         if action == -1:
             # print("SELECT")
@@ -446,7 +444,7 @@ class Player:
                     self.addedCardSys(resource,selectedCard)
         elif selectedCard.getResource["type"] == "choose":
             if isinstance(selectedCard, Stage):
-                self.chooseStage.append(selectedCard)
+                self.chooseStage.append(stage)
             else:
                 self.choosecard.append(selectedCard)
         else:
