@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
 # C extensions
 *.so
 
@@ -133,8 +134,12 @@ SevenWondersEnv/SevenWonEnv/envs/Model3Players/
 SevenWondersEnv/SevenWonEnv/envs/Model4Player/
 SevenWondersEnv/SevenWonEnv/envs/ModelDict/
 
-#Graph files
+# Graph files
 SevenWondersEnv/SevenWonEnv/envs/Graph/
 
-#Game Log
+# Game Log
 SevenWondersEnv/SevenWonEnv/envs/GameLog/
+
+# PyCharm
+.DS_Store
+.idea

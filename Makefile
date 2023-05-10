@@ -7,6 +7,7 @@ develop:  ## install dependencies and build library
 	python -m pip install pylint
 	python -m pip install gymnasium
 	python -m pip install coverage
+	python -m pip install check-manifest
 
 build:  ## build the python library
 	python setup.py build build_ext --inplace

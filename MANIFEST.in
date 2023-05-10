@@ -8,3 +8,5 @@ include LICENSE
 include README.md
 recursive-include SevenWondersEnv *.py
 recursive-include SevenWondersEnv *.json
+recursive-include SevenWondersEnv *.png
+recursive-include SevenWondersEnv *.txt
