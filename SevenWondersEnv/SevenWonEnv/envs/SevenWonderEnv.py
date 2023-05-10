@@ -391,7 +391,11 @@ class SevenWonderEnv(gym.Env):
                 self.discarded.append(card)
                 print("PLAYER {} discard {}".format(j + 1, card.name))
             elif action == 2:
-                print("PLAYER {} upgrade wonders to stage {}".format(j + 1, self.playerList[j+1].wonders.stage))
+                print(
+                    "PLAYER {} upgrade wonders to stage {}".format(
+                        j + 1, self.playerList[j + 1].wonders.stage
+                    )
+                )
             else:
                 print("PLAYER {} play {}".format(j + 1, card.name))
         rotateHand(self.playerList, self.age)

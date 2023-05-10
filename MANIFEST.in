@@ -1,0 +1,12 @@
+include CODE_OF_CONDUCT.md
+include CONTRIBUTING.md
+include Makefile
+include SECURITY.md
+include setup.py
+include .pylintrc
+include LICENSE
+include README.md
+recursive-include SevenWondersEnv *.py
+recursive-include SevenWondersEnv *.json
+recursive-include SevenWondersEnv *.png
+recursive-include SevenWondersEnv *.txt
