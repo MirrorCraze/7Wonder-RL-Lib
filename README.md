@@ -16,3 +16,26 @@ There are multiple environments for the AI game testing. However, environments i
 Most of the Euro-games board games are good game environments to test the algorithm on as there are many aspects to explore, such as tradings, dealing with imperfect informations, stochastic elements, etc.
 
 7 Wonders board games introduced multiple elements mentioned above which are good for testing out new algorithm. This library will cover basic game systems and allow users to customize the environments with custom state space and rewarding systems.
+
+## Installation
+To install the gym environment, run ```pip install -e SevenWondersEnv```
+Example codes of how to declare the gym environment is displayed below
+```
+import SevenWonEnv
+from SevenWonEnv.envs.mainGameEnv import Personality 
+
+env = gym.make("SevenWonderEnv", player=4) #Declare Environment with 4 Players
+```
+To use the Personality that is given (RandomAI, RuleBasedAI, DQNAI, Human), use ```setPersonality(personalityList)```
+```
+personalityList = []
+    personalityList.append(Personality.DQNAI)
+    for i in range(1, 4):
+        personalityList.append(Personality.RandomAI)
+    env.setPersonality(personalityList)
+```
+To run the game each step,
+```
+stateList = env.step(None)
+```
+The variable stateList consist of n 4-tuple, depends on number of players. Each tuple are (new_state, reward, done, info).

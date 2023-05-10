@@ -129,12 +129,12 @@ dmypy.json
 .pyre/
 
 # Model files
-7WondersEnv/SevenWonEnv/envs/Model3Players/
-7WondersEnv/SevenWonEnv/envs/Model4Player/
-7WondersEnv/SevenWonEnv/envs/ModelDict/
+SevenWondersEnv/SevenWonEnv/envs/Model3Players/
+SevenWondersEnv/SevenWonEnv/envs/Model4Player/
+SevenWondersEnv/SevenWonEnv/envs/ModelDict/
 
 #Graph files
-7WondersEnv/SevenWonEnv/envs/Graph/
+SevenWondersEnv/SevenWonEnv/envs/Graph/
 
 #Game Log
-7WondersEnv/SevenWonEnv/envs/GameLog/
+SevenWondersEnv/SevenWonEnv/envs/GameLog/

@@ -1,3 +1,6 @@
 # CONTRIBUTION GUIDELINE
 
-TODO
+## Prerequisites
+* gymnasium
+* NumPy
+* 
