@@ -14,9 +14,7 @@ class Wonder:
         for level in steps:
             # print("build level : {}".format(level))
             levelNum = int(level[6])
-            self.step[levelNum] = Stage(
-                levelNum, kwargs[level]["payResource"], kwargs[level]["getResource"]
-            )
+            self.step[levelNum] = Stage(levelNum, kwargs[level]["payResource"], kwargs[level]["getResource"])
 
     def printWonder(self):
         print(self.__dict__)

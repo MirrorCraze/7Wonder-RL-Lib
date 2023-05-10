@@ -83,9 +83,7 @@ class SevenWonderEnv(gym.Env):
         cardAge = []
         for color in jsonAge:
             for card in jsonAge[color]:
-                card = buildCard(
-                    card["name"], color, card["payResource"], card["getResource"]
-                )
+                card = buildCard(card["name"], color, card["payResource"], card["getResource"])
                 cardAge.append(card)
         return cardAge
 
@@ -119,19 +117,13 @@ class SevenWonderEnv(gym.Env):
             side = "A" if random.randrange(2) % 2 == 0 else "B"
             wonderCurName = wonderSelected[i - 1]
             wonderCur = wonderList[wonderCurName]
-            initialResource = Resource(
-                wonderCur["initial"]["type"], wonderCur["initial"]["amount"]
-            )
-            newWonders = Wonder(
-                wonderCurName, side, initialResource, **wonderList[wonderCurName][side]
-            )
+            initialResource = Resource(wonderCur["initial"]["type"], wonderCur["initial"]["amount"])
+            newWonders = Wonder(wonderCurName, side, initialResource, **wonderList[wonderCurName][side])
             newPlayer.assignWonders(newWonders)
             playerList[i] = newPlayer
         for i in range(1, player + 1):
             curPlayer = playerList[i]
-            playerList[i].assignLeftRight(
-                playerList[curPlayer.left], playerList[curPlayer.right]
-            )
+            playerList[i].assignLeftRight(playerList[curPlayer.left], playerList[curPlayer.right])
         print("SETUP COMPLETE")
         return cardAge, playerList
 
@@ -145,20 +137,14 @@ class SevenWonderEnv(gym.Env):
                 continue
             for action in actionCode:
                 if action == 2:  # discard is always available
-                    posAct.append(
-                        self.actionToCode(self.dictCardToCode[card.name], action)
-                    )
+                    posAct.append(self.actionToCode(self.dictCardToCode[card.name], action))
                 if action == 0:  # pay normally
                     left, right = player.playable(card)
                     if left != -1 and right != -1:
-                        posAct.append(
-                            self.actionToCode(self.dictCardToCode[card.name], action)
-                        )
+                        posAct.append(self.actionToCode(self.dictCardToCode[card.name], action))
                 if action == 1:  # pay with effect freeStructure
                     if player.freeStructure:
-                        posAct.append(
-                            self.actionToCode(self.dictCardToCode[card.name], action)
-                        )
+                        posAct.append(self.actionToCode(self.dictCardToCode[card.name], action))
                 if action == 3:
                     steps = player.wonders.step
                     existedStage = player.wonders.stage + 1
@@ -166,11 +152,7 @@ class SevenWonderEnv(gym.Env):
                     if existedStage < len(steps):
                         left, right = player.playable(steps[existedStage])
                         if left != -1 and right != -1:
-                            posAct.append(
-                                self.actionToCode(
-                                    self.dictCardToCode[card.name], action
-                                )
-                            )
+                            posAct.append(self.actionToCode(self.dictCardToCode[card.name], action))
         return posAct
 
     def stateGenerator(self, playerNum):
@@ -235,9 +217,7 @@ class SevenWonderEnv(gym.Env):
         for ageNum in range(1, 4):
             cardThisAge = self.cardAge[ageNum - 1]
             random.shuffle(cardThisAge)
-            self.cardShuffled.append(
-                [cardThisAge[i : i + 7] for i in range(0, len(cardThisAge), 7)]
-            )
+            self.cardShuffled.append([cardThisAge[i : i + 7] for i in range(0, len(cardThisAge), 7)])
         for i in range(len(self.cardShuffled[0])):
             self.playerList[i + 1].assignHand(self.cardShuffled[0][i])
         print("Setup complete")
@@ -265,12 +245,10 @@ class SevenWonderEnv(gym.Env):
             if self.specialAction == 1:  # buildDiscarded
                 if actionList[0] != 0:
                     return True  # illegal action. A card must be played, not used for wonders or discarded.
-            elif (
-                self.specialAction == 2
-            ):  # playSeventhCard. Still have to pay (if needed)
-                if actionList[0] == 2 and self.playerList[
-                    playerNum
-                ].wonders.stage + 1 >= len(self.playerList[playerNum].wonders.step):
+            elif self.specialAction == 2:  # playSeventhCard. Still have to pay (if needed)
+                if actionList[0] == 2 and self.playerList[playerNum].wonders.stage + 1 >= len(
+                    self.playerList[playerNum].wonders.step
+                ):
                     return True  # illegal action. Can't upgrade wonders if it's already maxed
         if actionList[0] == 2 and self.playerList[playerNum].wonders.stage + 1 >= len(
             self.playerList[playerNum].wonders.step
@@ -345,13 +323,8 @@ class SevenWonderEnv(gym.Env):
                     self.age += 1
                     self.turn = 0
                     for i in range(len(self.playerList)):
-                        self.playerList[i + 1].assignHand(
-                            self.cardShuffled[self.age - 1][i]
-                        )
-                        if any(
-                            "freeStructure" in effect
-                            for effect in self.playerList[i + 1].endAgeEffect
-                        ):
+                        self.playerList[i + 1].assignHand(self.cardShuffled[self.age - 1][i])
+                        if any("freeStructure" in effect for effect in self.playerList[i + 1].endAgeEffect):
                             self.playerList[i + 1].freeStructure = True
             return vecState, reward, done, info
         else:
@@ -391,11 +364,7 @@ class SevenWonderEnv(gym.Env):
                 self.discarded.append(card)
                 print("PLAYER {} discard {}".format(j + 1, card.name))
             elif action == 2:
-                print(
-                    "PLAYER {} upgrade wonders to stage {}".format(
-                        j + 1, self.playerList[j + 1].wonders.stage
-                    )
-                )
+                print("PLAYER {} upgrade wonders to stage {}".format(j + 1, self.playerList[j + 1].wonders.stage))
             else:
                 print("PLAYER {} play {}".format(j + 1, card.name))
         rotateHand(self.playerList, self.age)
@@ -413,9 +382,7 @@ class SevenWonderEnv(gym.Env):
                     self.tempCardList = copy.deepcopy(player.hand)
                     player.hand = self.discarded
                 else:
-                    card, action = player.playFromEffect(
-                        self.discarded, player.endTurnEffect, self.age
-                    )
+                    card, action = player.playFromEffect(self.discarded, player.endTurnEffect, self.age)
                     removeCard = None
                     for disCard in self.discarded:
                         if disCard.name == card.name:
@@ -460,13 +427,8 @@ class SevenWonderEnv(gym.Env):
                 self.age += 1
                 self.turn = 0
                 for i in range(len(self.playerList)):
-                    self.playerList[i + 1].assignHand(
-                        self.cardShuffled[self.age - 1][i]
-                    )
-                    if any(
-                        "freeStructure" in effect
-                        for effect in self.playerList[i + 1].endAgeEffect
-                    ):
+                    self.playerList[i + 1].assignHand(self.cardShuffled[self.age - 1][i])
+                    if any("freeStructure" in effect for effect in self.playerList[i + 1].endAgeEffect):
                         self.playerList[i + 1].freeStructure = True
         # print("AFTER AGE" + str(self.age) + "TURN" + str(self.turn))
         # for playerNum in self.playerList:
@@ -490,9 +452,7 @@ class SevenWonderEnv(gym.Env):
         for ageNum in range(1, 4):
             cardThisAge = self.cardAge[ageNum - 1]
             random.shuffle(cardThisAge)
-            self.cardShuffled.append(
-                [cardThisAge[i : i + 7] for i in range(0, len(cardThisAge), 7)]
-            )
+            self.cardShuffled.append([cardThisAge[i : i + 7] for i in range(0, len(cardThisAge), 7)])
         for i in range(len(self.cardShuffled[0])):
             self.playerList[i + 1].assignHand(self.cardShuffled[0][i])
         state = self.stateGenerator(1)
