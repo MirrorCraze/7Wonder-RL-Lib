@@ -36,20 +36,14 @@ def init(player):
         side = "A" if random.randrange(2) % 2 == 0 else "B"
         wonderCurName = wonderSelected[i - 1]
         wonderCur = wonderList[wonderCurName]
-        initialResource = Resource(
-            wonderCur["initial"]["type"], wonderCur["initial"]["amount"]
-        )
+        initialResource = Resource(wonderCur["initial"]["type"], wonderCur["initial"]["amount"])
         # print(type(wonderList[wonderCurName][side]))
-        newWonders = Wonder(
-            wonderCurName, side, initialResource, **wonderList[wonderCurName][side]
-        )
+        newWonders = Wonder(wonderCurName, side, initialResource, **wonderList[wonderCurName][side])
         newPlayer.assignWonders(newWonders)
         playerList[i] = newPlayer
     for i in range(1, player + 1):
         curPlayer = playerList[i]
-        playerList[i].assignLeftRight(
-            playerList[curPlayer.left], playerList[curPlayer.right]
-        )
+        playerList[i].assignLeftRight(playerList[curPlayer.left], playerList[curPlayer.right])
     print("SETUP COMPLETE")
     return cardAge, playerList
 
@@ -59,9 +53,7 @@ def getCardAge(age, player, cardList):
     cardAge = []
     for color in jsonAge:
         for card in jsonAge[color]:
-            card = buildCard(
-                card["name"], color, card["payResource"], card["getResource"]
-            )
+            card = buildCard(card["name"], color, card["payResource"], card["getResource"])
             cardAge.append(card)
     return cardAge
 
@@ -75,17 +67,13 @@ if __name__ == "__main__":
     sys.stdout = open(path, "w")
     cardAge, playerList = init(player)
     for player in playerList.keys():
-        print(
-            "Player {} with wonders {}".format(player, playerList[player].wonders.name)
-        )
+        print("Player {} with wonders {}".format(player, playerList[player].wonders.name))
     for age in range(1, 4):
         cardThisAge = cardAge[age - 1]
         random.shuffle(cardThisAge)
         cardShuffled = [cardThisAge[i : i + 7] for i in range(0, len(cardThisAge), 7)]
         for i in range(len(cardShuffled)):
-            if any(
-                "freeStructure" in effect for effect in playerList[i + 1].endAgeEffect
-            ):
+            if any("freeStructure" in effect for effect in playerList[i + 1].endAgeEffect):
                 playerList[i + 1].freeStructure = True
             playerList[i + 1].assignHand(cardShuffled[i])
         for i in range(0, 6):
@@ -108,12 +96,8 @@ if __name__ == "__main__":
             for j in range(len(playerList)):
                 player = playerList[j + 1]
                 if player.endTurnEffect == "buildDiscarded":
-                    card, action = player.playFromEffect(
-                        discarded, player.endTurnEffect, age=age
-                    )
-                    discarded = [
-                        disCard for disCard in discarded if disCard.name != card.name
-                    ]
+                    card, action = player.playFromEffect(discarded, player.endTurnEffect, age=age)
+                    discarded = [disCard for disCard in discarded if disCard.name != card.name]
         print("REMAINING HANDS")
         for j in range(len(playerList)):
             discarded.append(playerList[j + 1].hand[0])

@@ -7,12 +7,8 @@ from collections import namedtuple, deque
 
 class DQNModel:
     def __init__(self):
-        self.Transition = namedtuple(
-            "Transition", ("state", "action", "next_state", "reward")
-        )
-        self.TransitionWithoutReward = namedtuple(
-            "TransitionWithoutReward", ("state", "action", "next_state")
-        )
+        self.Transition = namedtuple("Transition", ("state", "action", "next_state", "reward"))
+        self.TransitionWithoutReward = namedtuple("TransitionWithoutReward", ("state", "action", "next_state"))
         self.BATCH_SIZE = 128
         self.GAMMA = 0.999
         # Decaying epsilon greedy.

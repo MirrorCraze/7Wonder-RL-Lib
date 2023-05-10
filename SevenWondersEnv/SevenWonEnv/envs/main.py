@@ -18,9 +18,7 @@ import matplotlib.pyplot as plt
 from model import DQNModel
 
 Transition = namedtuple("Transition", ("state", "action", "next_state", "reward"))
-TransitionWithoutReward = namedtuple(
-    "TransitionWithoutReward", ("state", "action", "next_state")
-)
+TransitionWithoutReward = namedtuple("TransitionWithoutReward", ("state", "action", "next_state"))
 BATCH_SIZE = 128
 GAMMA = 0.999
 # Decaying epsilon greedy.
@@ -111,12 +109,8 @@ if __name__ == "__main__":
             if number > maxNumber:
                 maxNumber = number
     if maxNumber > 0:
-        poliNet.load_state_dict(
-            torch.load(os.path.join("ModelDict", "poliNet" + str(maxNumber) + ".pt"))
-        )
-        tarNet.load_state_dict(
-            torch.load(os.path.join("ModelDict", "tarNet" + str(maxNumber) + ".pt"))
-        )
+        poliNet.load_state_dict(torch.load(os.path.join("ModelDict", "poliNet" + str(maxNumber) + ".pt")))
+        tarNet.load_state_dict(torch.load(os.path.join("ModelDict", "tarNet" + str(maxNumber) + ".pt")))
     prevEp = maxNumber
     poliNet.train()
     tarNet.load_state_dict(poliNet.state_dict())
@@ -128,9 +122,7 @@ if __name__ == "__main__":
     def select_action(state, possibleAction):
         global steps
         sample = random.random()
-        EpsGreed_threshold = EpsGreed_END + (EpsGreed_START - EpsGreed_END) * math.exp(
-            -1.0 * steps / EpsGreed_DECAY
-        )
+        EpsGreed_threshold = EpsGreed_END + (EpsGreed_START - EpsGreed_END) * math.exp(-1.0 * steps / EpsGreed_DECAY)
         steps += 1
         if sample > EpsGreed_threshold:
             with torch.no_grad():
@@ -144,9 +136,7 @@ if __name__ == "__main__":
                 # print(output)
                 return output.max(1)[1].view(1, 1)
         else:
-            return torch.tensor(
-                [[random.choice(possibleAction)]], device=device, dtype=torch.long
-            )
+            return torch.tensor([[random.choice(possibleAction)]], device=device, dtype=torch.long)
 
     episode_reward = []
     mean_reward = []
@@ -184,17 +174,13 @@ if __name__ == "__main__":
             device=device,
             dtype=torch.bool,
         )
-        non_final_next_states = torch.cat(
-            [s for s in batch.next_state if s is not None]
-        )
+        non_final_next_states = torch.cat([s for s in batch.next_state if s is not None])
         state_batch = torch.cat(batch.state)
         action_batch = torch.cat(batch.action)
         reward_batch = torch.cat(batch.reward)
         state_action_values = poliNet(state_batch).gather(1, action_batch)
         next_state_values = torch.zeros(BATCH_SIZE, device=device)
-        next_state_values[non_final_mask] = (
-            tarNet(non_final_next_states).max(1)[0].detach()
-        )
+        next_state_values[non_final_mask] = tarNet(non_final_next_states).max(1)[0].detach()
         # Compute the expected Q values
         expected_state_action_values = (next_state_values * GAMMA) + reward_batch
 
@@ -235,9 +221,7 @@ if __name__ == "__main__":
             # print("PLAY" + str(action.item()))
             newNPState, reward, done, info = env.step()
             reward = torch.tensor([reward], device=device)
-            newState = torch.from_numpy(
-                newNPState.reshape(1, newNPState.size).astype(np.float32)
-            )
+            newState = torch.from_numpy(newNPState.reshape(1, newNPState.size).astype(np.float32))
             # Store the transition in memory
             subMemory.append([state, action, newState])
             # print("T" + str(t) + " REWARD " + str(reward))

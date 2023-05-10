@@ -69,9 +69,7 @@ class Test(unittest.TestCase):
             assert result[0].payResource == {"type": "none"}
 
     def testBattle(self):
-        with mock.patch.object(
-            Player, "__init__", lambda se, playNum, totNum, person: None
-        ):
+        with mock.patch.object(Player, "__init__", lambda se, playNum, totNum, person: None):
             p1 = Player(0, 4, Human)
             p2 = Player(0, 4, Human)
             p1.resource = {}

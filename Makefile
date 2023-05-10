@@ -9,6 +9,7 @@ develop:  ## install dependencies and build library
 	python -m pip install coverage
 	python -m pip install check-manifest
 	python -m pip install black
+	python -m pip install mypy
 
 build:  ## build the python library
 	python setup.py build build_ext --inplace
