@@ -21,7 +21,7 @@ install:  ## install library
 #########
 lint:  ## run static analysis with pylint
 	python -m black SevenWondersEnv
-	python -m pylint --rcfile=.pylintrc $(git ls-files '*.py')
+	pylint --rcfile=.pylintrc $$(git ls-files '*.py')
 
 # Alias
 lints: lint
