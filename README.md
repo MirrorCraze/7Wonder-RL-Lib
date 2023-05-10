@@ -38,3 +38,16 @@ To run the game each step,
 stateList = env.step(None)
 ```
 The variable stateList consist of n 4-tuple, depends on number of players. Each tuple are (new_state, reward, done, info).
+
+To add the custom model, change the ```SevenWondersEnv/SevenWonEnv/envs/mainGameEnv/Personality.py``` file. 
+Each personality will have 2 main functions, which are init and make_choice.
+
+For example, RandomAI takes all possible choices and randomly choose one choice.
+```
+class RandomAI(Personality):
+    def __init__(self):
+        super().__init__()
+
+    def make_choice(self, player, age, options):
+        return random.choice(range(len(options)))
+```
