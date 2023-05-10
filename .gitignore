@@ -130,15 +130,18 @@ dmypy.json
 .pyre/
 
 # Model files
-SevenWondersEnv/SevenWonEnv/envs/Model3Players/
-SevenWondersEnv/SevenWonEnv/envs/Model4Player/
-SevenWondersEnv/SevenWonEnv/envs/ModelDict/
+SevenWonEnv/envs/Model3Players/
+SevenWonEnv/envs/Model4Player/
+SevenWonEnv/envs/ModelDict/
+SevenWondersEnv/SevenWonEnv/envs/Model3Players
+SevenWondersEnv/SevenWonEnv/envs/Model4Player
+SevenWondersEnv/SevenWonEnv/envs/ModelDict
 
 # Graph files
-SevenWondersEnv/SevenWonEnv/envs/Graph/
+SevenWonEnv/envs/Graph/
 
 # Game Log
-SevenWondersEnv/SevenWonEnv/envs/GameLog/
+SevenWonEnv/envs/GameLog/
 
 # PyCharm
 .DS_Store
