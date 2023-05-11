@@ -4,7 +4,7 @@
 * Python >=3.9
 
 ## Contribution
-1. Clone the library using ```gh repo clone MirrorCraze/7Wonder-RL-Lib```
+1. Fork the library and clone to your local machine
 2. Install library and dependencies using
    * ```make develop # Download all prerequisites ```
    * ```make build # Build the library```
@@ -13,8 +13,6 @@
 ## Making a PR
 1. Run ```make lint``` and ```make test``` and make sure all test passed
 2. Submit the PR
-
-
 
 ## What to focus on now?
 * More substantial test (Coverage is still low for now)
