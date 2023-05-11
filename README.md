@@ -18,8 +18,17 @@ Most of the Euro-games board games are good game environments to test the algori
 7 Wonders board games introduced multiple elements mentioned above which are good for testing out new algorithm. This library will cover basic game systems and allow users to customize the environments with custom state space and rewarding systems.
 
 ## Installation
-To install the gym environment, run ```pip install -e SevenWondersEnv```
+To install the gym environment, run 
+```
+make develop
+make build 
+make install
+```
+
+## Usage
 Example codes of how to declare the gym environment is displayed below
+
+
 ```
 import SevenWonEnv
 from SevenWonEnv.envs.mainGameEnv import Personality 

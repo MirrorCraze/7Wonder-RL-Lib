@@ -24,7 +24,9 @@ EnvAmount = 0
 
 
 class SevenWonderEnv(gym.Env):
-    def loadWonder(self):
+
+    #Private helper methods
+    def __loadWonder(self):
         fileOper = open("mainGameEnv/Card/wonders_list.json", "rt")
         wonderList = json.load(fileOper)
         wonderList = wonderList["wonders"]
@@ -32,10 +34,10 @@ class SevenWonderEnv(gym.Env):
         fileOper.close()
         return wonderList, wonderName
 
-    def actionToCode(self, cardCode, actionCode):
+    def __actionToCode(self, cardCode, actionCode):
         return cardCode * 4 + actionCode
 
-    def codeToAction(self, action):
+    def __codeToAction(self, action):
         cardCode = int(action / 4)
         actionCode = action % 4
         # convert cardCode and actionCode to ones that can be used in step
@@ -43,7 +45,7 @@ class SevenWonderEnv(gym.Env):
         playlist = self.dictPlay[actionCode]
         return card, playlist
 
-    def initActionSpace(self):
+    def __initActionSpace(self):
         counter = 0
         fileOper = open("mainGameEnv/Card/card_list.json", "rt")
         cardList = json.load(fileOper)
@@ -78,29 +80,13 @@ class SevenWonderEnv(gym.Env):
 
     metadata = {"render.modes": ["human"]}
 
-    def getCardAge(self, age, player, cardList):
-        jsonAge = filterPlayer(cardList[age], player)
-        cardAge = []
-        for color in jsonAge:
-            for card in jsonAge[color]:
-                card = buildCard(card["name"], color, card["payResource"], card["getResource"])
-                cardAge.append(card)
-        return cardAge
-
-    def addPlayer(self, personality):
+    def __addPlayer(self, personality):
         assignNumber = self.player - self.unAssignedPersonality + 1
         self.playerList[assignNumber].assignPersonality(personality)
         self.unAssignedPersonality -= 1
         print("Player {} is ".format(assignNumber), personality)
 
-    def setPersonality(self, personalityList):
-        self.personalityList = personalityList
-        for personality in personalityList:
-            if self.unAssignedPersonality == 0:
-                sys.exit("Program Stopped : Add too many players' personality")
-            self.addPlayer(personality)
-
-    def initGameNPerson(self, player):
+    def __initGameNPerson(self, player):
         self.unAssignedPersonality = player
         fileOper = open("mainGameEnv/Card/card_list.json", "rt")
         cardList = json.load(fileOper)
@@ -108,7 +94,7 @@ class SevenWonderEnv(gym.Env):
         for i in range(1, 4):
             cardAge.append(self.getCardAge("age_" + str(i), player, cardList))
         fileOper.close()
-        wonderList, wonderName = self.loadWonder()
+        wonderList, wonderName = self.__loadWonder()
         random.shuffle(wonderName)
         wonderSelected = wonderName[0:player]
         playerList = {}
@@ -127,35 +113,8 @@ class SevenWonderEnv(gym.Env):
         print("SETUP COMPLETE")
         return cardAge, playerList
 
-    def legalAction(self, playerNum):
-        player = self.playerList[playerNum]
-        actionCode = range(4)
-        posAct = []
-        for card in player.hand:
-            if self.specialAction == 1:  # play from discard
-                posAct.append(self.actionToCode(self.dictCardToCode[card.name], 0))
-                continue
-            for action in actionCode:
-                if action == 2:  # discard is always available
-                    posAct.append(self.actionToCode(self.dictCardToCode[card.name], action))
-                if action == 0:  # pay normally
-                    left, right = player.playable(card)
-                    if left != -1 and right != -1:
-                        posAct.append(self.actionToCode(self.dictCardToCode[card.name], action))
-                if action == 1:  # pay with effect freeStructure
-                    if player.freeStructure:
-                        posAct.append(self.actionToCode(self.dictCardToCode[card.name], action))
-                if action == 3:
-                    steps = player.wonders.step
-                    existedStage = player.wonders.stage + 1
-                    # print(type(steps[existedStage]))
-                    if existedStage < len(steps):
-                        left, right = player.playable(steps[existedStage])
-                        if left != -1 and right != -1:
-                            posAct.append(self.actionToCode(self.dictCardToCode[card.name], action))
-        return posAct
 
-    def stateGenerator(self, playerNum):
+    def __stateGenerator(self, playerNum):
         state = []
         for resourceAmount in self.playerList[playerNum].resource.values():
             state.append(resourceAmount)
@@ -177,64 +136,19 @@ class SevenWonderEnv(gym.Env):
         state.append(self.age - 1)
         return state
 
-    def __init__(self, player):
-        global EnvAmount
-        super(SevenWonderEnv, self).__init__()
-        self.player = player
-        self.dictPlay = {}
-        self.dictCard = {}
-        self.dictCardToCode = {}
-        self.personalityList = []
-        self.initActionSpace()
-        path = "GameLog/gameLog" + str(EnvAmount) + ".txt"
-        EnvAmount = EnvAmount + 1
-        # sys.stdout = open(path, 'w')
-        # action space
-        # 75 unique cards to play * (play(2, use effect FREESTRUCTURE and NOT use effect) + discard(1) + upgradeWonder(1) = 4 action per card) = 300 total actions
-        # action = 4*cardCode + actionCode
-        self.action_space = spaces.Discrete(300)
-        # observation space
-        # resourceAmountOwn(11) + colorAmountOwn(7)+ownEastTradingCost(7)+ownWestTradingCost(7)+ coin (1) resourceAmountLeft(11)+colorAmountLeft(7)
-        # +resourceAmountRight(11)+colorAmountRight(7)+AgeNumber(1)
-        # =observation_space of 70
-        obserSpaceSize = (
-            ([5] * 10 + [20] + [10] * 7 + [2] * 7 + [2] * 7 + [100])
-            + ([5] * 10 + [20] + [10] * 7)
-            + ([5] * 10 + [20] + [10] * 7)
-            + [3]
-        )
-        self.observation_space = spaces.MultiDiscrete(obserSpaceSize)
-        self.discarded = []
-        self.cardAge = None
-        self.playerList = None
-        self.age = 1
-        self.turn = 0
-        self.cardShuffled = []
-        self.specialAction = 0
-        self.tempCardList = []
-        self.unAssignedPersonality = 0
-        self.cardAge, self.playerList = self.initGameNPerson(self.player)
-        for ageNum in range(1, 4):
-            cardThisAge = self.cardAge[ageNum - 1]
-            random.shuffle(cardThisAge)
-            self.cardShuffled.append([cardThisAge[i : i + 7] for i in range(0, len(cardThisAge), 7)])
-        for i in range(len(self.cardShuffled[0])):
-            self.playerList[i + 1].assignHand(self.cardShuffled[0][i])
-        print("Setup complete")
-
     def printPersonality(self):
         for i in range(1, self.player + 1):
             print(self.playerList[i].personality)
 
-    def stepActionDict(self):
+    def __stepActionDict(self):
         actionDict = {}
         for i in range(1, self.player + 1):
             card, action = self.playerList[i].playCard(self.age)
-            actionDict[i] = self.actionToCode(card, action)
+            actionDict[i] = self.__actionToCode(card, action)
         return actionDict
 
-    def illegalAction(self, action, playerNum):
-        cardName, actionList = self.codeToAction(action)
+    def __illegalAction(self, action, playerNum):
+        cardName, actionList = self.__codeToAction(action)
         card = self.playerList[playerNum].findCardFromHand(cardName)
         info = {}
         done = False
@@ -256,15 +170,15 @@ class SevenWonderEnv(gym.Env):
             return True  # illegal action. Can't upgrade wonders if it's already maxed
         return False
 
-    def rewardCalculation(self, action, playerNum):
-        cardName, actionList = self.codeToAction(action)
+    def __rewardCalculation(self, action, playerNum):
+        cardName, actionList = self.__codeToAction(action)
         player = self.playerList[playerNum]
         card = player.findCardFromHand(cardName)
         info = {}
         done = False
         reward = 0
-        if self.illegalAction(action, playerNum):
-            state = self.stateGenerator(playerNum)
+        if self.__illegalAction(action, playerNum):
+            state = self.__stateGenerator(playerNum)
             vecState = np.array(state).reshape((70,))
             return vecState, -10000, done, info
         left, right = player.playable(card)
@@ -290,7 +204,7 @@ class SevenWonderEnv(gym.Env):
                     ]
                 cardGet, action = player.playChosenCard(selectedCard)
                 self.specialAction = 0
-            state = self.stateGenerator(playerNum)
+            state = self.__stateGenerator(playerNum)
             vecState = np.array(state).reshape((70,))
             if self.turn == 6 and "extraPlay" not in info.keys():
                 for j in range(len(self.playerList)):
@@ -345,11 +259,92 @@ class SevenWonderEnv(gym.Env):
             cardGet, action = player.playChosenCard(selectedCard)
             if action == -1:
                 self.discarded.append(card)
-        state = self.stateGenerator(playerNum)
+        state = self.__stateGenerator(playerNum)
         vecState = np.array(state).reshape((70,))
         return vecState, reward, done, info
 
+
+    #Public methods
+    def __init__(self, player):
+        """
+        Initialize the environment with given amount of player
+        Args:
+            player: amount of player
+        """
+        global EnvAmount
+        super(SevenWonderEnv, self).__init__()
+        self.player = player
+        self.dictPlay = {}
+        self.dictCard = {}
+        self.dictCardToCode = {}
+        self.personalityList = []
+        self.__initActionSpace()
+        path = "GameLog/gameLog" + str(EnvAmount) + ".txt"
+        EnvAmount = EnvAmount + 1
+        # sys.stdout = open(path, 'w')
+        # action space
+        # 75 unique cards to play * (play(2, use effect FREESTRUCTURE and NOT use effect) + discard(1) + upgradeWonder(1) = 4 action per card) = 300 total actions
+        # action = 4*cardCode + actionCode
+        self.action_space = spaces.Discrete(300)
+        # observation space
+        # resourceAmountOwn(11) + colorAmountOwn(7)+ownEastTradingCost(7)+ownWestTradingCost(7)+ coin (1) resourceAmountLeft(11)+colorAmountLeft(7)
+        # +resourceAmountRight(11)+colorAmountRight(7)+AgeNumber(1)
+        # =observation_space of 70
+        obserSpaceSize = (
+            ([5] * 10 + [20] + [10] * 7 + [2] * 7 + [2] * 7 + [100])
+            + ([5] * 10 + [20] + [10] * 7)
+            + ([5] * 10 + [20] + [10] * 7)
+            + [3]
+        )
+        self.observation_space = spaces.MultiDiscrete(obserSpaceSize)
+        self.discarded = []
+        self.cardAge = None
+        self.playerList = None
+        self.age = 1
+        self.turn = 0
+        self.cardShuffled = []
+        self.specialAction = 0
+        self.tempCardList = []
+        self.unAssignedPersonality = 0
+        self.cardAge, self.playerList = self.__initGameNPerson(self.player)
+        for ageNum in range(1, 4):
+            cardThisAge = self.cardAge[ageNum - 1]
+            random.shuffle(cardThisAge)
+            self.cardShuffled.append([cardThisAge[i : i + 7] for i in range(0, len(cardThisAge), 7)])
+        for i in range(len(self.cardShuffled[0])):
+            self.playerList[i + 1].assignHand(self.cardShuffled[0][i])
+        print("Setup complete")
+    def setPersonality(self, personalityList):
+        """
+        Set the personality for each player.
+
+        Args:
+            personalityList: List[Personality]
+        """
+        self.personalityList = personalityList
+        for personality in personalityList:
+            if self.unAssignedPersonality == 0:
+                sys.exit("Program Stopped : Add too many players' personality")
+            self.__addPlayer(personality)
+
+    def getCardAge(self, age, player, cardList):
+        jsonAge = filterPlayer(cardList[age], player)
+        cardAge = []
+        for color in jsonAge:
+            for card in jsonAge[color]:
+                card = buildCard(card["name"], color, card["payResource"], card["getResource"])
+                cardAge.append(card)
+        return cardAge
     def step(self, action):
+        """
+        Proceed one turn of the game.
+
+        Args:
+            action: 0 by default.
+
+        Returns:
+            List[tuple] containing (new_state, reward, done, info)
+        """
         if self.unAssignedPersonality != 0:
             sys.exit("Program Stopped : Some Players do not have personality.")
         rewardAll = []
@@ -357,8 +352,8 @@ class SevenWonderEnv(gym.Env):
             card, action = self.playerList[j + 1].playCard(self.age)
             print("Card, action", card, action)
 
-            actionCode = self.actionToCode(self.dictCardToCode[card.name], action)
-            vecState, reward, done, info = self.rewardCalculation(actionCode, j + 1)
+            actionCode = self.__actionToCode(self.dictCardToCode[card.name], action)
+            vecState, reward, done, info = self.__rewardCalculation(actionCode, j + 1)
             rewardAll.append((vecState, reward, done, info))
             if action == -1:  # card discarded
                 self.discarded.append(card)
@@ -441,13 +436,61 @@ class SevenWonderEnv(gym.Env):
         # print("special " + str(self.specialAction))
 
         return rewardAll
+    def legalAction(self, playerNum):
+        """
+        Given the player number, return all legal actions as a list of action code
+
+        Args:
+            playerNum: The position of player (1-n)
+
+        Returns:
+            List[actionCode]
+
+        """
+        player = self.playerList[playerNum]
+        actionCode = range(4)
+        posAct = []
+        for card in player.hand:
+            if self.specialAction == 1:  # play from discard
+                posAct.append(self.__actionToCode(self.dictCardToCode[card.name], 0))
+                continue
+            for action in actionCode:
+                if action == 2:  # discard is always available
+                    posAct.append(self.__actionToCode(self.dictCardToCode[card.name], action))
+                if action == 0:  # pay normally
+                    left, right = player.playable(card)
+                    if left != -1 and right != -1:
+                        posAct.append(self.__actionToCode(self.dictCardToCode[card.name], action))
+                if action == 1:  # pay with effect freeStructure
+                    if player.freeStructure:
+                        posAct.append(self.__actionToCode(self.dictCardToCode[card.name], action))
+                if action == 3:
+                    steps = player.wonders.step
+                    existedStage = player.wonders.stage + 1
+                    # print(type(steps[existedStage]))
+                    if existedStage < len(steps):
+                        left, right = player.playable(steps[existedStage])
+                        if left != -1 and right != -1:
+                            posAct.append(self.__actionToCode(self.dictCardToCode[card.name], action))
+        return posAct
 
     def reset(self, seed=None, options=None):
+        """
+        Reset the environment after each episode
+
+        Args:
+            seed: Seed ID for randomization
+            options: Default to None
+
+        Returns:
+            List[State]
+
+        """
         self.age = 1
         self.turn = 0
         self.cardShuffled = []
         self.discarded = []
-        self.cardAge, self.playerList = self.initGameNPerson(self.player)
+        self.cardAge, self.playerList = self.__initGameNPerson(self.player)
         self.setPersonality(self.personalityList)
         for ageNum in range(1, 4):
             cardThisAge = self.cardAge[ageNum - 1]
@@ -455,7 +498,7 @@ class SevenWonderEnv(gym.Env):
             self.cardShuffled.append([cardThisAge[i : i + 7] for i in range(0, len(cardThisAge), 7)])
         for i in range(len(self.cardShuffled[0])):
             self.playerList[i + 1].assignHand(self.cardShuffled[0][i])
-        state = self.stateGenerator(1)
+        state = self.__stateGenerator(1)
         vecState = np.array(state).reshape((70,))
         # (vecState.shape)
         return vecState
