@@ -45,14 +45,16 @@ annotate:  ## run type checking
 #########
 # TESTS #
 #########
+.ONESHELL:
 test: ## clean and run unit tests
 	cd SevenWondersEnv/SevenWonEnv/envs/
-	python -m unittest Test/allTests.py
+	python -m unittest tests/allTests.py
 	cd ../../../
 
+.ONESHELL:
 coverage:  ## clean and run unit tests with coverage
 	cd SevenWondersEnv/SevenWonEnv/envs/
-	python -m coverage run unittest Test/allTests.py
+	python -m coverage run -m unittest tests/allTests.py
 	python -m coverage report
 	python -m coverage json
 	cd ../../../
