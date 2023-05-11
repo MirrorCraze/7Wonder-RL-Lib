@@ -103,14 +103,14 @@ if __name__ == "__main__":
     poliNet = DQN(n_observationsLen, n_actions).to(device)
     tarNet = DQN(n_observationsLen, n_actions).to(device)
     maxNumber = 0
-    for file in os.listdir("ModelDict"):
-        if file.endswith(".pt") and file.startswith("poli"):
-            number = int(file[7:-3])
-            if number > maxNumber:
-                maxNumber = number
-    if maxNumber > 0:
-        poliNet.load_state_dict(torch.load(os.path.join("ModelDict", "poliNet" + str(maxNumber) + ".pt")))
-        tarNet.load_state_dict(torch.load(os.path.join("ModelDict", "tarNet" + str(maxNumber) + ".pt")))
+    # for file in os.listdir("ModelDict"):
+    #     if file.endswith(".pt") and file.startswith("poli"):
+    #         number = int(file[7:-3])
+    #         if number > maxNumber:
+    #             maxNumber = number
+    # if maxNumber > 0:
+    #     poliNet.load_state_dict(torch.load(os.path.join("ModelDict", "poliNet" + str(maxNumber) + ".pt")))
+    #     tarNet.load_state_dict(torch.load(os.path.join("ModelDict", "tarNet" + str(maxNumber) + ".pt")))
     prevEp = maxNumber
     poliNet.train()
     tarNet.load_state_dict(poliNet.state_dict())
@@ -197,6 +197,10 @@ if __name__ == "__main__":
 
     num_episodes = 20000
     prevEp = 0
+    if not os.path.exists("ModelDict"):
+        os.makedirs("ModelDict")
+        os.makedirs("ModelDict/poliNet")
+        os.makedirs("ModelDict/tarNet")
     for i_episode in range(prevEp, num_episodes):
         if i_episode % 200 == 0:
             torch.save(
