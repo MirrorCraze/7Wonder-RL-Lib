@@ -9,6 +9,7 @@ Library providing environment for testing Reinforcement learning in 7 Wonders Ga
 [![CodeQL](https://github.com/MirrorCraze/7Wonder-RL-Lib/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/MirrorCraze/7Wonder-RL-Lib/actions/workflows/github-code-scanning/codeql)
 [![Build + CodeCov + Pylint/Black](https://github.com/MirrorCraze/7Wonder-RL-Lib/actions/workflows/build.yml/badge.svg)](https://github.com/MirrorCraze/7Wonder-RL-Lib/actions/workflows/build.yml)
 [![PyPI](https://img.shields.io/pypi/v/7Wonder-RL-Lib)](https://pypi.org/project/7Wonder-RL-Lib/0.1.0/)
+[![GitHub Pages](https://img.shields.io/badge/Github%20Pages-Link-lightgrey)](https://mirrorcraze.github.io/7Wonder-RL-Lib/)
 
 ## Overview
 There are multiple environments for the AI game testing. However, environments implemented now are mostly covered only the traditional board games (Go, Chess, etc.) or 52-card based card games (Poker, Rummy, etc.) where games do not really have interactions with other players.
@@ -18,8 +19,17 @@ Most of the Euro-games board games are good game environments to test the algori
 7 Wonders board games introduced multiple elements mentioned above which are good for testing out new algorithm. This library will cover basic game systems and allow users to customize the environments with custom state space and rewarding systems.
 
 ## Installation
-To install the gym environment, run ```pip install -e SevenWondersEnv```
+To install the gym environment, run 
+```
+make develop
+make build 
+make install
+```
+
+## Usage
 Example codes of how to declare the gym environment is displayed below
+
+
 ```
 import SevenWonEnv
 from SevenWonEnv.envs.mainGameEnv import Personality 

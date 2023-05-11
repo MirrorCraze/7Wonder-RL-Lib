@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to 7Wonder-RL-Lib’s documentation! &mdash; 7Wonder-RL-Lib 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            7Wonder-RL-Lib
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to 7Wonder-RL-Lib’s documentation!</a></li>
+<li><a class="reference internal" href="#readme-file">Readme File</a><ul>
+<li><a class="reference internal" href="#wonder-rl-lib">7Wonder-RL-Lib</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-SevenWonEnv.envs.SevenWonderEnv">Documentation</a><ul>
+<li><a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv"><code class="docutils literal notranslate"><span class="pre">SevenWonderEnv</span></code></a><ul>
+<li><a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.close"><code class="docutils literal notranslate"><span class="pre">SevenWonderEnv.close()</span></code></a></li>
+<li><a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.legalAction"><code class="docutils literal notranslate"><span class="pre">SevenWonderEnv.legalAction()</span></code></a></li>
+<li><a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.render"><code class="docutils literal notranslate"><span class="pre">SevenWonderEnv.render()</span></code></a></li>
+<li><a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.reset"><code class="docutils literal notranslate"><span class="pre">SevenWonderEnv.reset()</span></code></a></li>
+<li><a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.setPersonality"><code class="docutils literal notranslate"><span class="pre">SevenWonderEnv.setPersonality()</span></code></a></li>
+<li><a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.step"><code class="docutils literal notranslate"><span class="pre">SevenWonderEnv.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">7Wonder-RL-Lib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to 7Wonder-RL-Lib’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-7wonder-rl-lib-s-documentation">
+<h1>Welcome to 7Wonder-RL-Lib’s documentation!<a class="headerlink" href="#welcome-to-7wonder-rl-lib-s-documentation" title="Permalink to this heading">¶</a></h1>
+</section>
+<section id="readme-file">
+<h1>Readme File<a class="headerlink" href="#readme-file" title="Permalink to this heading">¶</a></h1>
+<section id="wonder-rl-lib">
+<h2>7Wonder-RL-Lib<a class="headerlink" href="#wonder-rl-lib" title="Permalink to this heading">¶</a></h2>
+<p>Library providing environment for testing Reinforcement learning in 7 Wonders Game.</p>
+<img alt="GitHub" src="https://img.shields.io/github/license/mirrorcraze/7Wonder-RL-Lib">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/mirrorcraze/7Wonder-RL-Lib">
+<p><a class="reference external" href="https://codecov.io/gh/MirrorCraze/7Wonder-RL-Lib"><img alt="codecov" src="https://codecov.io/gh/MirrorCraze/7Wonder-RL-Lib/branch/main/graph/badge.svg?token=7JDHEZ4E76" /></a>
+<a class="reference external" href="https://github.com/MirrorCraze/7Wonder-RL-Lib/actions/workflows/github-code-scanning/codeql"><img alt="CodeQL" src="https://github.com/MirrorCraze/7Wonder-RL-Lib/actions/workflows/github-code-scanning/codeql/badge.svg" /></a>
+<a class="reference external" href="https://github.com/MirrorCraze/7Wonder-RL-Lib/actions/workflows/build.yml"><img alt="Build + CodeCov + Pylint/Black" src="https://github.com/MirrorCraze/7Wonder-RL-Lib/actions/workflows/build.yml/badge.svg" /></a>
+<a class="reference external" href="https://pypi.org/project/7Wonder-RL-Lib/0.1.0/"><img alt="PyPI" src="https://img.shields.io/pypi/v/numpy" /></a></p>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h3>
+<p>There are multiple environments for the AI game testing. However, environments implemented now are mostly covered only the traditional board games (Go, Chess, etc.) or 52-card based card games (Poker, Rummy, etc.) where games do not really have interactions with other players.</p>
+<p>Most of the Euro-games board games are good game environments to test the algorithm on as there are many aspects to explore, such as tradings, dealing with imperfect informations, stochastic elements, etc.</p>
+<p>7 Wonders board games introduced multiple elements mentioned above which are good for testing out new algorithm. This library will cover basic game systems and allow users to customize the environments with custom state space and rewarding systems.</p>
+</section>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h3>
+<p>To install the gym environment, run</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">develop</span>
+<span class="n">make</span> <span class="n">build</span>
+<span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h3>
+<p>Example codes of how to declare the gym environment is displayed below</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">SevenWonEnv</span>
+<span class="kn">from</span> <span class="nn">SevenWonEnv.envs.mainGameEnv</span> <span class="kn">import</span> <span class="n">Personality</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s2">&quot;SevenWonderEnv&quot;</span><span class="p">,</span> <span class="n">player</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#Declare Environment with 4 Players</span>
+</pre></div>
+</div>
+<p>To use the Personality that is given (RandomAI, RuleBasedAI, DQNAI, Human), use <code class="docutils literal notranslate"><span class="pre">setPersonality(personalityList)</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">personalityList</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">personalityList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Personality</span><span class="o">.</span><span class="n">DQNAI</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="n">personalityList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Personality</span><span class="o">.</span><span class="n">RandomAI</span><span class="p">)</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">setPersonality</span><span class="p">(</span><span class="n">personalityList</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To run the game each step,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stateList</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The variable stateList consist of n 4-tuple, depends on number of players. Each tuple are (new_state, reward, done, info).</p>
+<p>To add the custom model, change the <code class="docutils literal notranslate"><span class="pre">SevenWondersEnv/SevenWonEnv/envs/mainGameEnv/Personality.py</span></code> file.
+Each personality will have 2 main functions, which are init and make_choice.</p>
+<p>For example, RandomAI takes all possible choices and randomly choose one choice.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">RandomAI</span><span class="p">(</span><span class="n">Personality</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">make_choice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">options</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">options</span><span class="p">)))</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="module-SevenWonEnv.envs.SevenWonderEnv">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#module-SevenWonEnv.envs.SevenWonderEnv" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">SevenWonEnv.envs.SevenWonderEnv.</span></span><span class="sig-name descname"><span class="pre">SevenWonderEnv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>After the user has finished using the environment, close contains the code necessary to “clean up” the environment.</p>
+<p>This is critical for closing rendering windows, database or HTTP connections.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.legalAction">
+<span class="sig-name descname"><span class="pre">legalAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">playerNum</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.legalAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the player number, return all legal actions as a list of action code</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>playerNum: The position of player (1-n)</p>
+</dd>
+<dt>Returns:</dt><dd><p>List[actionCode]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.render">
+<span class="sig-name descname"><span class="pre">render</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'human'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.render" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the render frames as specified by <code class="xref py py-attr docutils literal notranslate"><span class="pre">render_mode</span></code> during the initialization of the environment.</p>
+<p>The environment’s <code class="xref py py-attr docutils literal notranslate"><span class="pre">metadata</span></code> render modes (<cite>env.metadata[“render_modes”]</cite>) should contain the possible
+ways to implement the render modes. In addition, list versions for most render modes is achieved through
+<cite>gymnasium.make</cite> which automatically applies a wrapper to collect rendered frames.</p>
+<dl class="simple">
+<dt>Note:</dt><dd><p>As the <code class="xref py py-attr docutils literal notranslate"><span class="pre">render_mode</span></code> is known during <code class="docutils literal notranslate"><span class="pre">__init__</span></code>, the objects used to render the environment state
+should be initialised in <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
+</dd>
+</dl>
+<p>By convention, if the <code class="xref py py-attr docutils literal notranslate"><span class="pre">render_mode</span></code> is:</p>
+<ul class="simple">
+<li><p>None (default): no render is computed.</p></li>
+<li><p>“human”: The environment is continuously rendered in the current display or terminal, usually for human consumption.
+This rendering should occur during <a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.step" title="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.step"><code class="xref py py-meth docutils literal notranslate"><span class="pre">step()</span></code></a> and <a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.render" title="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.render"><code class="xref py py-meth docutils literal notranslate"><span class="pre">render()</span></code></a> doesn’t need to be called. Returns <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p>“rgb_array”: Return a single frame representing the current state of the environment.
+A frame is a <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code> with shape <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">3)</span></code> representing RGB values for an x-by-y pixel image.</p></li>
+<li><p>“ansi”: Return a strings (<code class="docutils literal notranslate"><span class="pre">str</span></code>) or <code class="docutils literal notranslate"><span class="pre">StringIO.StringIO</span></code> containing a terminal-style text representation
+for each time step. The text can include newlines and ANSI escape sequences (e.g. for colors).</p></li>
+<li><p>“rgb_array_list” and “ansi_list”: List based version of render modes are possible (except Human) through the
+wrapper, <code class="xref py py-class docutils literal notranslate"><span class="pre">gymnasium.wrappers.RenderCollection</span></code> that is automatically applied during <code class="docutils literal notranslate"><span class="pre">gymnasium.make(...,</span> <span class="pre">render_mode=&quot;rgb_array_list&quot;)</span></code>.
+The frames collected are popped after <a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.render" title="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.render"><code class="xref py py-meth docutils literal notranslate"><span class="pre">render()</span></code></a> is called or <a class="reference internal" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.reset" title="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.reset"><code class="xref py py-meth docutils literal notranslate"><span class="pre">reset()</span></code></a>.</p></li>
+</ul>
+<dl class="simple">
+<dt>Note:</dt><dd><p>Make sure that your class’s <code class="xref py py-attr docutils literal notranslate"><span class="pre">metadata</span></code> <code class="docutils literal notranslate"><span class="pre">&quot;render_modes&quot;</span></code> key includes the list of supported modes.</p>
+</dd>
+</dl>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.25.0: </span>The render function was changed to no longer accept parameters, rather these parameters should be specified
+in the environment initialised, i.e., <code class="docutils literal notranslate"><span class="pre">gymnasium.make(&quot;CartPole-v1&quot;,</span> <span class="pre">render_mode=&quot;human&quot;)</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the environment after each episode</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>seed: Seed ID for randomization
+options: Default to None</p>
+</dd>
+<dt>Returns:</dt><dd><p>List[State]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.setPersonality">
+<span class="sig-name descname"><span class="pre">setPersonality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">personalityList</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.setPersonality" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the personality for each player.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>personalityList: List[Personality]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SevenWonEnv.envs.SevenWonderEnv.SevenWonderEnv.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proceed one turn of the game.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>action: 0 by default.</p>
+</dd>
+<dt>Returns:</dt><dd><p>List[tuple] containing (new_state, reward, done, info)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Phudis Dawieang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
