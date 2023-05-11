@@ -11,3 +11,5 @@ recursive-include SevenWondersEnv *.json
 recursive-include SevenWondersEnv *.png
 recursive-include SevenWondersEnv *.txt
 include .bumpversion.cfg
+recursive-include docs *
+
